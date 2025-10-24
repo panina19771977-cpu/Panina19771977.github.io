@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Стать участником — Natalia Help</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <nav>
+      <a class="brand" href="index.html"><span class="logo">🌿</span><b>Natalia Help</b></a>
+      <div class="links">
+        <a href="about.html">О проекте</a>
+        <a href="faq.html">FAQ</a>
+        <a href="apply.html" class="cta">Стать участником</a>
+      </div>
+    </nav>
+    <h1>Заявка на участие</h1>
+    <p>Заполните форму — мы свяжемся и подтвердим регистрацию.</p>
+  </div>
+</header>
+<main class="container">
+  <section class="card">
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <!-- TODO: замените YOUR_FORMSPREE_ID на ваш ID вида f/xyzabcde -->
+      <label>Ваше имя</label>
+      <input type="text" name="name" required>
+      <label>Email</label>
+      <input type="email" name="email" required>
+      <label>Ежемесячный взнос (€)</label>
+      <select name="tier">
+        <option>50</option><option selected>100</option><option>150</option><option>200</option>
+      </select>
+      <label>Комментарий (по желанию)</label>
+      <textarea name="message" rows="4" placeholder="Расскажите о своей цели..."></textarea>
+      <input type="hidden" name="_subject" value="Новая заявка на участие">
+      <button type="submit">Отправить заявку</button>
+    </form>
+    <p class="small">После отправки вы получите подтверждение на email. Если форма не работает, проверьте ID Formspree.</p>
+  </section>
+
+  <section>
+    <h2>Мгновенная поддержка</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>Поддержать проект</h3>
+        <p>Вы можете сделать добровольный взнос любым удобным способом.</p>
+        <a class="cta" href="#" onclick="alert('Вставьте вашу ссылку на оплату (Revolut/PayPal)');return false;">Оплатить</a>
+      </div>
+      <div class="card">
+        <h3>Реферальная программа</h3>
+        <p>Пригласите друзей и получите дополнительный шанс на раннюю выплату.</p>
+      </div>
+      <div class="card">
+        <h3>Вопросы?</h3>
+        <p>Пишите на <a href="mailto:info@natalia-help.example">info@natalia-help.example</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="container">© 2025 Natalia Help</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
