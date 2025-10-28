@@ -38,41 +38,33 @@
     <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnataliahelp.netlify.app&count_bg=%2322B389&title_bg=%23043D3D&icon=leaf.svg&icon_color=%23FFFFFF&title=Просмотры&edge_flat=false" alt="Просмотры" />
   </div>
 </section>
-
 <script>
-  // Временные данные
-  const participants = 48; // поставь реальное количество участников
-  const total = participants * 10; // пример расчёта (если каждый внёс 10 €)
+// --- Временные данные
+const participants = 48; // поставь реальное количество участников
+const total = participants * 10; // например, если каждый внёс по 10 €
 
-  // Анимация плавного счёта
-  function animate(id, value) {
-    const el = document.getElementById(id);
-    let count = 0;
-    const step = value / 60;
-    const interval = setInterval(() => {
-      count += step;
-      if (count >= value) {
-        count = value;
-        clearInterval(interval);
-      }
-      el.textContent = Math.floor(count);
-    }, 20);
-  }
+// --- Анимация плавного счёта
+function animate(id, value) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  let count = 0;
+  const step = value / 60;
+  const interval = setInterval(() => {
+    count += step;
+    if (count >= value) {
+      count = value;
+      clearInterval(interval);
+    }
+    el.textContent = Math.floor(count);
+  }, 20);
+}
 
-  document.addEventListener("DOMContentLoaded", () => {
-    animate("participants", participants);
-    animate("total", total);
-  });
-<script>
-  // 👉 Временные данные (пока без базы)
-  // Когда будет база — эти цифры можно будет брать автоматически
-  let participants = 48;   // ← сюда поставь актуальное число участников
-  let total = participants * 10; // например, если каждый внёс 10 евро
-
-  // Отображаем данные на сайте
-  document.getElementById("participants").textContent = participants;
-  document.getElementById("total").textContent = total.toFixed(2);
-</script><!-- Счётчик посещений -->
+// --- Запуск, когда страница загружена
+document.addEventListener("DOMContentLoaded", () => {
+  animate("participants", participants);
+  animate("total", total);
+});
+</script>
 <div style="text-align:center; margin-top:40px; font-size:14px; color:#555;">
   👣 Посетителей сайта: 
   <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://panina19771977-cpu.github.io/&count_bg=%2378C850&title_bg=%23555555&icon=leaf.svg&icon_color=%23FFFFFF&title=Посещения&edge_flat=false"/>
