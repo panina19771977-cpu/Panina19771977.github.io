@@ -267,7 +267,43 @@ footer{padding:26px 18px 60px; text-align:center; color:#2b6666}
     </div>
   </section>
 </main>
+<!-- 📊 Статистика проекта -->
+<section id="stats" style="text-align:center;margin:40px auto;padding:20px;max-width:700px;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.05);">
+  <h2 style="color:#199672;margin-bottom:12px;">📊 Статистика проекта NHP</h2>
+  <p style="font-size:1.1rem;">💚 Участников: <span id="participants" style="font-weight:bold;color:#22b389;">0</span></p>
+  <p style="font-size:1.1rem;">💶 Общий вклад: <span id="total" style="font-weight:bold;color:#22b389;">0</span> €</p>
+  <div style="margin-top:10px;">
+    👁️ Посетителей сайта:
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnataliahelp.netlify.app&count_bg=%2322B389&title_bg=%23043D3D&icon=leaf.svg&icon_color=%23FFFFFF&title=Просмотры&edge_flat=false" alt="Просмотры" />
+  </div>
+</section>
 
+<script>
+  // 📈 Примерная статистика (можно менять числа)
+  const participants = 48; // участников
+  const total = participants * 10; // например, если каждый внёс 10 €
+
+  // Анимация плавного увеличения чисел
+  function animate(id, value) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    let count = 0;
+    const step = value / 60;
+    const interval = setInterval(() => {
+      count += step;
+      if (count >= value) {
+        count = value;
+        clearInterval(interval);
+      }
+      el.textContent = Math.floor(count);
+    }, 20);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    animate("participants", participants);
+    animate("total", total);
+  });
+</script>
 <footer>
   © 2025 Natalia Help Project — NHP | Вместе сильнее 🌿
   <br />
