@@ -1,363 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S002SKDYR4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-S002SKDYR4');
-</script>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Natalia Help Project — NHP | Together We’re Stronger</title>
-<meta name="description" content="Natalia Help Project — a mutual support initiative. Give a little today — receive support tomorrow. Transparent queue, calculator, PayPal/Revolut, honest rules." />
-<link rel="icon" href="nhp-favicon-512.png" type="image/png" />
-<link rel="apple-touch-icon" href="nhp-favicon-180.png" />
-<style>
-:root{--mint:#22b389;--mint-dark:#1b8f6c;--leaf:#199672;--text:#043d3d;--card:#fff;--shadow:0 8px 24px rgba(0,0,0,.08);--ring:0 0 0 3px rgba(34,179,137,.25)}
-*{box-sizing:border-box} html,body{margin:0}
-body{
-  font-family:Arial,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text);
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.94)),
-    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80')
-    no-repeat center/cover fixed;
-  line-height:1.6;
-}
-.header{position:sticky; top:0; z-index:10; backdrop-filter:saturate(1.2) blur(6px); background:rgba(255,255,255,.85); box-shadow:var(--shadow)}
-.wrap{max-width:1100px; margin:0 auto; padding:0 18px}
-.row{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-.logo{display:flex; align-items:center; gap:10px; font-weight:800; color:#0f5a4d; font-size:20px}
-.logo .leaf{display:inline-block; animation:pulse 2.6s ease-in-out infinite}
-@keyframes pulse{0%,100%{filter:drop-shadow(0 0 0 rgba(34,179,137,0))}50%{filter:drop-shadow(0 0 10px rgba(34,179,137,.6))}}
-nav a{color:var(--text); text-decoration:none; margin:0 10px; font-weight:600}
-nav a:hover{text-decoration:underline}
-.donate-top{background:var(--mint); color:#fff; padding:10px 16px; border-radius:999px; text-decoration:none; font-weight:700; box-shadow:var(--shadow)}
-.donate-top:hover{background:var(--mint-dark)}
-.hero{padding:40px 18px}
-.card{background:var(--card); border-radius:18px; box-shadow:var(--shadow); padding:28px; margin:0 auto; max-width:1100px}
-h1{margin:0 0 10px; font-size:34px; letter-spacing:.2px}
-.sub{margin:0 0 18px; color:#2b6666}
-.cta{display:inline-block; background:var(--mint); color:#fff; font-weight:800; padding:12px 22px; border-radius:999px; text-decoration:none; box-shadow:var(--shadow)}
-.cta:hover{background:var(--mint-dark)}
-section{padding:18px} h2{margin:6px 0 16px; font-size:26px}
-.grid{display:grid; gap:16px}
-@media(min-width:760px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
-.mini{display:flex; gap:12px; align-items:flex-start; padding:14px 16px; background:#f7fffb; border:1px solid #e5f7ef; border-radius:12px}
-.field{margin:6px 0 10px} .field label{display:block; font-weight:700; margin:0 0 6px}
-.input{width:100%; padding:12px 14px; border:1px solid #cfeee5; border-radius:12px; outline:0; background:#fff}
-.input:focus{box-shadow:var(--ring); border-color:#aee5d6}
-.btn{background:var(--mint); color:#fff; border:0; padding:10px 16px; border-radius:12px; font-weight:800; cursor:pointer}
-.btn:hover{background:var(--mint-dark)}
-.note{margin-top:8px; color:#2b6666}
-table{width:100%; border-collapse:collapse; font-size:14px; background:#fff; border-radius:12px; overflow:hidden; box-shadow:var(--shadow)}
-th,td{padding:10px 12px; border-bottom:1px solid #eef4f1; text-align:left}
-tr:nth-child(even){background:#fbfefd}
-tr.me{background:#eafaf4}
-.form-note{min-height:22px; font-weight:700}
-.ok{color:#147d56} .err{color:#b12b2b}
-footer{padding:26px 18px 60px; text-align:center; color:#2b6666}
-.donate-bottom{display:inline-block; margin-top:10px; background:#e8fff7; border:1px solid #cfeee5; color:var(--leaf); padding:10px 14px; border-radius:999px; text-decoration:none; font-weight:800}
-.donate-bottom:hover{background:#dff8f0}
-.float-donate{position:fixed; right:14px; bottom:14px; background:var(--mint); color:#fff; padding:12px 16px; border-radius:999px; text-decoration:none; font-weight:800; box-shadow:var(--shadow)}
-.float-donate:hover{background:var(--mint-dark)}
-@keyframes soft-glow{0%,100%{box-shadow:0 0 0 rgba(34,179,137,0)}50%{box-shadow:0 0 15px rgba(34,179,137,.35)}} .glow{animation:soft-glow 2.8s ease-in-out infinite}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natalia Help Project — NHP | Together We’re Stronger 🌿</title>
+  <meta name="description" content="Natalia Help Project — honest mutual support. Contribute a little today and receive help tomorrow. Transparent, human and kind. Created by Natalia Domkina.">
+  <meta name="theme-color" content="#1b8f6c">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="180x180" href="nhp-favicon-180.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="nhp-favicon-512.png">
+  <link rel="apple-touch-icon" href="nhp-favicon-180.png">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S002SKDYR4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-S002SKDYR4');
+  </script>
 </head>
-<body>
-
-<header class="header">
-  <div class="wrap row">
-    <div class="logo"><span class="leaf">🌿</span> Natalia Help Project — NHP</div>
-    <nav>
-      <a href="nataliahelp.html" title="Русская версия">🇷🇺 Russian</a>
-      <a href="#hero">Home</a><a href="#how">How it works</a><a href="#why">Why I created this</a>
-      <a href="#calc">Calculator</a><a href="#queue">Queue</a><a href="#trust">Transparency</a>
-      <a href="#faq">FAQ</a><a href="#rules">Rules</a><a href="#apply">Apply</a><a href="#donate">Support</a><a href="#contacts">Contacts</a>
+<body data-lang="en">
+  <header class="topbar">
+    <div class="logo">🌿 Natalia Help Project — NHP</div>
+    <nav class="main-nav">
+      <a href="nataliahelp-en.html">Home</a>
+      <a href="#how">How it works</a>
+      <a href="#support">Support</a>
+      <a href="#faq">FAQ</a>
+      <a href="#share">Share</a>
+      <a href="index.html" class="lang-link">RU 🇷🇺</a>
     </nav>
-    <a class="donate-top" href="https://paypal.me/NataliaDomkina" target="_blank" rel="noopener">Support project 💚</a>
-  </div>
-</header>
+  </header>
 
-<main>
-  <!-- Hero -->
-  <div class="hero" id="hero">
-    <div class="card">
-      <h1>Together We’re Stronger <span class="leaf">🌿</span></h1>
-      <p class="sub">
-        Natalia Help Project is a mutual support initiative. Everyone can contribute a little today and receive support tomorrow.
-        We promise no miracles — help comes from participants’ contributions.
-      </p>
-      <a href="#apply" class="cta">Apply for help 💌</a>
-    </div>
-  </div>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Together We’re Stronger 🌿</h1>
+        <p><strong>Natalia Help Project</strong> is a transparent mutual support initiative. Everyone can contribute a little today and receive support tomorrow. No miracles — just people and kindness.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#apply">Apply for help 💌</a>
+          <a class="btn ghost" href="#support">Support project 💚</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><span id="participants">0</span><small>participants</small></div>
+          <div class="stat"><span id="fund">0</span> €<small>in total fund</small></div>
+          <div class="stat"><span>100% online</span><small>transparency</small></div>
+        </div>
+      </div>
+    </section>
 
-  <!-- How it works -->
-  <section id="how" class="wrap">
-    <div class="card">
+    <!-- How it works -->
+    <section id="how" class="section card">
       <h2>How it works</h2>
-      <div class="grid cols-3">
-        <div class="mini"><div>1️⃣</div><div><b>Contribute.</b> Your monthly payment goes to the shared fund. You can change your plan.</div></div>
-        <div class="mini"><div>2️⃣</div><div><b>Fund.</b> The system pays out in order; part of the fund is reserved for bonuses.</div></div>
-        <div class="mini"><div>3️⃣</div><div><b>Receive.</b> When your turn comes — you receive a payout and then help others.</div></div>
+      <p class="section-intro">Monthly contributions form the fund. Payments go in order. The more people join — the faster the queue moves.</p>
+      <div class="three-steps steps-grid">
+        <div class="step"><div class="step-num">1️⃣</div><h3>Contribute</h3><p>You make a monthly contribution. You can change the amount anytime.</p></div>
+        <div class="step"><div class="step-num">2️⃣</div><h3>Fund</h3><p>Collected money is distributed by order; part is reserved for stability.</p></div>
+        <div class="step"><div class="step-num">3️⃣</div><h3>Receive</h3><p>When your turn comes — you receive support and then help others.</p></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Why I created -->
-  <section id="why" class="wrap">
-    <div class="card">
-      <h2>Why I created this Project</h2>
-      <p class="sub">I’ve been working since I was 16. I don’t own a home and <b>no inheritance was left to me</b>. I know how it feels to work hard and still struggle. That’s why I launched <b>Natalia Help Project — NHP</b> — to support each other honestly and kindly.</p>
-      <p class="sub">There’s no “magic” here — only people sharing kindness. Step by step, euro by euro, we move the queue and change lives.</p>
-    </div>
-  </section>
-
-  <!-- Calculator -->
-  <section id="calc" class="wrap">
-    <div class="card">
-      <h2>Payout calculator</h2>
-      <div class="field">
-        <label for="c">Your monthly contribution (€)</label>
-        <input id="c" class="input" type="number" min="1" placeholder="For example, 100" />
+    <!-- Calculator -->
+    <section id="calc" class="section card">
+      <h2>Payout Calculator</h2>
+      <p class="section-intro">This helps to understand the logic. Actual speed depends on participants and fund size.</p>
+      <div class="calc-box">
+        <label for="contribution">Your monthly contribution (€):</label>
+        <input type="number" id="contribution" min="10" step="5" placeholder="e.g., 50">
+        <button class="btn primary" onclick="calculatePayout()">Calculate</button>
+        <p id="result" class="calc-result muted">Tip: months ≈ €10,000 / your contribution.</p>
       </div>
-      <button class="btn" id="cBtn">Calculate</button>
-      <div class="note" id="cOut"></div>
-      <p class="note">Tip: months ≈ €10,000 / your contribution. It’s an estimate, not a guarantee.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Queue -->
-  <section id="queue" class="wrap">
-    <div class="card">
-      <h2>Queue example and forecast</h2>
-      <div class="grid">
-        <div class="field">
-          <label for="qPosition">Your position</label>
-          <input id="qPosition" class="input" type="number" min="1" placeholder="e.g., 8" />
+    <!-- Queue -->
+    <section id="queue" class="section card">
+      <h2>Queue Example & Forecast</h2>
+      <div class="queue-grid">
+        <div class="queue-form">
+          <label for="queuePos">Your position:</label>
+          <input type="number" id="queuePos" min="1" placeholder="e.g., 120">
+          <label for="queueTotal">Total participants:</label>
+          <input type="number" id="queueTotal" min="1" placeholder="e.g., 1000">
+          <label for="queueContrib">Contribution per participant (€):</label>
+          <input type="number" id="queueContrib" min="10" placeholder="e.g., 50">
+          <button class="btn secondary" onclick="showQueue()">Show nearby</button>
+          <p class="muted small">Approximation: ⌊fund / €10,000⌋ people are paid each month.</p>
         </div>
-        <div class="field">
-          <label for="qPeople">Total participants</label>
-          <input id="qPeople" class="input" type="number" min="1" placeholder="e.g., 10000" />
-        </div>
-        <div class="field">
-          <label for="qPay">Contribution per participant (€)</label>
-          <input id="qPay" class="input" type="number" min="1" placeholder="e.g., 100" />
+        <div class="queue-table-wrapper">
+          <table class="queue-table">
+            <thead><tr><th>No.</th><th>Months until payout</th><th>Bonus</th></tr></thead>
+            <tbody id="queueTableBody"><tr><td colspan="3" class="muted">Fill the fields and click “Show nearby”.</td></tr></tbody>
+          </table>
         </div>
       </div>
-      <button class="btn" id="qBtn">Show nearby</button>
+    </section>
 
-      <div class="note" style="margin-top:10px">
-        Approximation: ⌊fund / €10,000⌋ people are paid each month.
+    <!-- Transparency -->
+    <section id="transparency" class="section">
+      <h2>Transparency & Trust</h2>
+      <div class="features">
+        <div class="feature"><span class="icon">📊</span><h3>Public Reports</h3><p>Collected, paid, reserve — open to all participants.</p></div>
+        <div class="feature"><span class="icon">🛟</span><h3>Reserve Fund</h3><p>1–3 months of payouts to smooth out fluctuations.</p></div>
+        <div class="feature"><span class="icon">🔐</span><h3>Privacy</h3><p>Stories and amounts are shared only with consent.</p></div>
       </div>
+    </section>
 
-      <div style="overflow:auto; margin-top:12px">
-        <table>
-          <thead><tr><th>No.</th><th>Months until payout</th><th>Bonus</th></tr></thead>
-          <tbody id="qBody">
-            <tr><td colspan="3">Fill the fields and click “Show nearby”.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
+    <!-- FAQ -->
+    <section id="faq" class="section card">
+      <h2>FAQ — Honest Answers</h2>
+      <details class="faq-item" open>
+        <summary>Why did I create this project?</summary>
+        <p>I started working at 16. I never had inheritance or my own home. I know how it feels to work hard all your life and still struggle. There are millions like me. This project is about mutual support without shame, where everyone can breathe easier and move toward their goal. Founder and coordinator — <strong>Natalia Domkina</strong>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is this charity or begging?</summary>
+        <p>It’s not begging — it’s mutual support. People voluntarily contribute to help others today and have the right to receive help tomorrow. No middlemen, no miracles — only fairness and transparency.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Where does the money come from?</summary>
+        <p>From monthly contributions. The fund is distributed in order, and part goes to reserve to ensure stability. The more participants — the faster the cycle.</p>
+      </details>
+      <details class="faq-item">
+        <summary>When will it be my turn?</summary>
+        <p>It depends on the fund and number of participants. Use the calculator and queue above to estimate. It’s not a promise, it’s transparent logic.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I stay anonymous or leave anytime?</summary>
+        <p>Yes. You can change or stop contributions anytime. Shared stories appear only with consent. Money already contributed remains to help others — your act of kindness.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How can I help without joining?</summary>
+        <p>Even 1 € helps the queue move faster. You can donate, share this project, or simply tell friends — awareness is also support.</p>
+      </details>
+    </section>
 
-  <!-- Transparency -->
-  <section class="wrap" id="trust">
-    <div class="card">
-      <h2>Transparency & trust</h2>
-      <div class="grid cols-3">
-        <div class="mini">📊 <div><b>Public reports.</b> Collected, paid, reserve — available to participants online.</div></div>
-        <div class="mini">🛟 <div><b>Reserve fund.</b> 1–3 months of payouts to smooth fluctuations.</div></div>
-        <div class="mini">🔐 <div><b>Privacy.</b> Stories and amounts are not published without consent.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="wrap" id="faq">
-    <div class="card">
-      <h2>FAQ — common questions</h2>
-      <div class="grid">
-        <div class="mini">❓ <div><b>Pyramid scheme?</b> No. Payouts come from real contributions by participants.</div></div>
-        <div class="mini">⏳ <div><b>When is my turn?</b> Depends on the total fund and number of participants.</div></div>
-        <div class="mini">🚪 <div><b>If I stop paying?</b> You can leave anytime; paid contributions remain as help to others.</div></div>
-        <div class="mini">⚡ <div><b>Faster?</b> Sometimes — via bonuses or inviting friends.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rules -->
-  <section class="wrap" id="rules">
-    <div class="card">
-      <h2>Participation rules (short)</h2>
-      <ul style="margin:0; padding-left:18px">
-        <li>Monthly contribution — any honest amount (min €10).</li>
-        <li>Distribution is in order; part of the fund goes to bonuses.</li>
-        <li>You can change your plan or leave anytime.</li>
-        <li>Operational costs are minimal and transparent.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Apply form -->
-  <section class="wrap" id="apply">
-    <div class="card">
-      <h2>Apply for help 💌</h2>
-      <p class="sub">If you need support, fill in the form below. Keep it simple and honest. What you write stays between us <span class="leaf">🌿</span></p>
-
-      <form id="helpForm" action="https://formspree.io/f/xvgwyayy" method="POST">
-        <div class="field">
-          <label for="name">Your name</label>
-          <input id="name" name="name" class="input" type="text" required />
-        </div>
-        <div class="field">
-          <label for="email">Email for contact</label>
-          <input id="email" name="email" class="input" type="email" required />
-        </div>
-        <div class="field">
-          <label for="story">Describe your goal</label>
-          <textarea id="story" name="story" class="input" rows="4" placeholder="What do you need help for…" required></textarea>
-        </div>
-        <div class="field">
-          <label for="sum">Desired amount (€)</label>
-          <input id="sum" name="sum" class="input" type="number" min="1" step="1" placeholder="For example, 50000" required />
-        </div>
-        <button class="btn" type="submit">Submit request 💚</button>
-        <div id="formNote" class="form-note" aria-live="polite"></div>
+    <!-- Apply -->
+    <section id="apply" class="section card">
+      <h2>Apply for Help 💌</h2>
+      <p class="section-intro">Describe your goal honestly — it stays between us.</p>
+      <form action="https://formspree.io/f/xvgwyayy" method="POST" class="apply-form">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Contact email" required>
+        <textarea name="story" rows="4" placeholder="Describe your goal and amount…" required></textarea>
+        <input type="number" name="sum" min="10" step="5" placeholder="Desired amount (€)" required>
+        <button type="submit" class="btn primary">Submit 💚</button>
       </form>
-    </div>
-  </section>
+      <p class="muted small">If the form doesn’t send — write to: <a href="mailto:panina19771977@gmail.com">panina19771977@gmail.com</a></p>
+    </section>
 
-  <!-- Donate -->
-  <section class="wrap" id="donate">
-    <div class="card">
-      <h2>Support the NHP — Natalia Help Project 💚</h2>
-      <p class="sub">Even €1 makes a difference. Choose a way:</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:18px 0">
-        <a class="btn" href="https://paypal.me/NataliaDomkina" target="_blank" rel="noopener">💚 PayPal</a>
-        <a class="btn" href="https://revolut.me/n_domkina" target="_blank" rel="noopener">💜 Revolut — @n_domkina</a>
+    <!-- Support -->
+    <section id="support" class="section card support-card">
+      <h2>Support the Project 💚</h2>
+      <p>Even €1 makes a difference and moves the queue faster.</p>
+      <div class="support-buttons">
+        <a class="btn gold" href="https://paypal.me/NataliaDomkina" target="_blank" rel="noreferrer">💚 PayPal — @Natalia Domkina</a>
+        <a class="btn green" href="https://revolut.me/n_domkina" target="_blank" rel="noreferrer">💜 Revolut — @n_domkina</a>
       </div>
-      <p class="note" style="text-align:center;">Thank you to everyone who helps! 🌿</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Invite friends -->
-  <section class="wrap" id="invite">
-    <div class="card">
-      <h2>Invite Friends 💌</h2>
-      <p class="sub">Tell your friends about Natalia Help — the more people join, the faster the queue moves.</p>
-      <div style="text-align:center;margin-top:20px">
-        <button class="btn" onclick="shareProject()">📣 Share this Project</button>
-        <div id="shareNote" class="form-note"></div>
+    <!-- Share -->
+    <section id="share" class="section card">
+      <h2>Share this Project</h2>
+      <p class="section-intro">The more people join — the faster support reaches everyone.</p>
+      <div class="share-buttons">
+        <a class="share-btn" href="https://t.me/share/url?url=https://nataliahelp-project.netlify.app&text=Join%20Natalia%20Help%20Project%20—%20honest%20mutual%20support" target="_blank">Telegram</a>
+        <a class="share-btn" href="https://wa.me/?text=Natalia%20Help%20Project%20https://nataliahelp-project.netlify.app" target="_blank">WhatsApp</a>
+        <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://nataliahelp-project.netlify.app" target="_blank">Facebook</a>
+        <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://nataliahelp-project.netlify.app&text=Natalia%20Help%20Project%20—%20Together%20We’re%20Stronger" target="_blank">X / Twitter</a>
+        <a class="share-btn" href="mailto:?subject=Natalia%20Help%20Project&body=Check%20out%20this%20project:%20https://nataliahelp-project.netlify.app" target="_blank">Email</a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Contacts -->
-  <section class="wrap" id="contacts">
-    <div class="card">
-      <h2>Contacts</h2>
-      <div class="mini">✉️ <div><b>Email:</b> panina19771977@gmail.com</div></div>
-      <div class="mini">💚 <div><b>Support the project:</b> <a href="https://paypal.me/NataliaDomkina" target="_blank" rel="noopener">paypal.me/NataliaDomkina</a> · <a href="https://revolut.me/n_domkina" target="_blank" rel="noopener">Revolut @n_domkina</a></div></div>
-    </div>
-  </section>
-</main>
-<!-- 📊 Project Statistics -->
-<section id="stats" style="text-align:center;margin:40px auto;padding:20px;max-width:700px;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.05);">
-  <h2 style="color:#199672;margin-bottom:12px;">📊 NHP Project Statistics</h2>
-  <p style="font-size:1.1rem;">💚 Participants: <span id="participants" style="font-weight:bold;color:#22b389;">0</span></p>
-  <p style="font-size:1.1rem;">💶 Total Raised: <span id="total" style="font-weight:bold;color:#22b389;">0</span> €</p>
-  <div style="margin-top:10px;">
+  <footer class="footer">
+    <p>✉️ Email: <a href="mailto:panina19771977@gmail.com">panina19771977@gmail.com</a></p>
+    <p>💚 Support: <a href="https://paypal.me/NataliaDomkina" target="_blank">PayPal</a> · <a href="https://revolut.me/n_domkina" target="_blank">Revolut</a></p>
+    <p>© 2025 Natalia Domkina — Natalia Help Project — NHP | Together We’re Stronger 🌿</p>
+  </footer>
 
-👁️ Visitors:
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fpanina19771977-cpu.github.io%2F&count_bg=%2322B389&title_bg=%23043D3D&icon=leaf.svg&icon_color=%23FFFFFF&title=Visitors&edge_flat=false" alt="Visitors" />
-  </div>
-</section>
-
-<script>
-  // 📈 Temporary data (can be updated later)
-  const participants = 48; // number of participants
-  const total = participants * 10; // e.g., if each contributed 10 €
-
-  // Smooth number animation
-  function animate(id, value) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    let count = 0;
-    const step = value / 60;
-    const interval = setInterval(() => {
-      count += step;
-      if (count >= value) {
-        count = value;
-        clearInterval(interval);
-      }
-      el.textContent = Math.floor(count);
-    }, 20);
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    animate("participants", participants);
-    animate("total", total);
-  });
-</script>
-<footer>
-  © 2025 Natalia Help Project — NHP | Together We’re Stronger 🌿
-  <br />
-  <a class="donate-bottom" href="https://paypal.me/NataliaDomkina" target="_blank" rel="noopener">Support project 💚</a>
-</footer>
-
-<a class="float-donate" href="https://paypal.me/NataliaDomkina" target="_blank" rel="noopener" aria-label="Support project">💚 Support</a>
-
-<script>
-const GOAL=10000;
-// Calculator
-document.getElementById('cBtn').addEventListener('click',()=>{
-  const c=Math.max(1,+document.getElementById('c').value||0);
-  const months=Math.ceil(GOAL/c),years=Math.floor(months/12),rest=months%12;
-  document.getElementById('cOut').innerHTML=`To reach €10,000 it will take approximately <b>${years} years</b> and <b>${rest} months</b> (${months} months).`;
-});
-// Queue
-document.getElementById('qBtn').addEventListener('click',()=>{
-  const pos=Math.max(1,+document.getElementById('qPosition').value||0);
-  const people=Math.max(1,+document.getElementById('qPeople').value||0);
-  const pay=Math.max(1,+document.getElementById('qPay').value||0);
-  const fund=people*pay, per=Math.max(1,Math.floor(fund/GOAL));
-  const tb=document.getElementById('qBody'); tb.innerHTML='';
-  const s=Math.max(1,pos-3), e=Math.min(people,pos+6);
-  for(let i=s;i<=e;i++){
-    const m=Math.ceil(i/per); const bonus=Math.random()<0.08?'💚 Yes':'—';
-    const tr=document.createElement('tr'); if(i===pos) tr.className='me';
-    tr.innerHTML=`<td>${i}</td><td>${m}</td><td>${bonus}</td>`; tb.appendChild(tr);
-  }
-});
-// Form (AJAX)
-const form=document.getElementById('helpForm'), note=document.getElementById('formNote');
-form.addEventListener('submit',async(e)=>{
-  e.preventDefault(); note.className='form-note'; note.textContent='Sending…';
-  try{
-    const resp=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
-    if(resp.ok){form.reset(); note.className='form-note ok'; note.textContent='Thank you! Your request has been sent.';}
-    else{note.className='form-note err'; note.textContent='Submission failed. Please try again later.';}
-  }catch(err){note.className='form-note err'; note.textContent='Network error. Please try again.';}
-});
-// Share
-function shareProject(){
-  const url=window.location.href;
-  if(navigator.share){
-    navigator.share({title:'Natalia Help Project',text:'🌿 Together we’re stronger!',url})
-      .then(()=>document.getElementById('shareNote').textContent='Thank you for sharing 💚')
-      .catch(()=>document.getElementById('shareNote').textContent='Sharing was canceled 😅');
-  }else{
-    navigator.clipboard.writeText(url)
-      .then(()=>document.getElementById('shareNote').textContent='Link copied! Share it with friends 💌');
-  }
-}
-// Glow on scroll
-const floatDonate=document.querySelector('.float-donate');
-window.addEventListener('scroll',()=>{ if(window.scrollY>500) floatDonate.classList.add('glow'); else floatDonate.classList.remove('glow');});
-</script>
+  <script src="script.js"></script>
 </body>
 </html>

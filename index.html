@@ -1,218 +1,201 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>    
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S002SKDYR4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-S002SKDYR4');
-</script>                                                                                                                                                                                                              
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Natalia Help Project — NHP | Вместе мы сильнее 🌿</title>
-  <meta name="description" content="Natalia Help Project — проект взаимопомощи. Внеси немного сегодня — получи поддержку завтра. Честные правила, прозрачная очередь, PayPal и Revolut." />
-  <link rel="icon" href="nhp-favicon-180.png" type="image/png" />
-  <style>
-    :root {
-      --mint: #22b389;
-      --leaf: #199672;
-      --text: #043d3d;
-      --card: #fff;
-    }
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: #f3fbf8;
-      color: var(--text);
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background: var(--leaf);
-      color: white;
-      padding: 15px;
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-shadow: 0 1px 2px rgba(0,0,0,.2);
-    }
-    .card {
-      background: var(--card);
-      margin: 20px auto;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      max-width: 700px;
-    }
-    button, a.btn {
-      background: var(--mint);
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: background 0.3s;
-      display: inline-block;
-      margin: 5px;
-    }
-    button:hover, a.btn:hover {
-      background: var(--leaf);
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #555;
-      padding-bottom: 40px;
-    }
-    .lang-toggle {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background: #fff;
-      border: 1px solid #cceee0;
-      color: var(--leaf);
-      font-weight: 700;
-      border-radius: 8px;
-      padding: 6px 12px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,.1);
-    }
-  </style>
-</head>
+  <meta name="description" content="Natalia Help Project — честная взаимопомощь. Внеси немного сегодня — получи поддержку завтра. Прозрачность, доверие и человечность. Автор: Natalia Domkina.">
+  <meta name="theme-color" content="#1b8f6c">
 
-<body>
-  <button class="lang-toggle" id="langToggle">EN</button>
-  <header>🌿 Natalia Help Project — NHP</header>
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="180x180" href="nhp-favicon-180.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="nhp-favicon-512.png">
+  <link rel="apple-touch-icon" href="nhp-favicon-180.png">
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S002SKDYR4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-S002SKDYR4');
+  </script>
+</head>
+<body data-lang="ru">
+  <header class="topbar">
+    <div class="logo">🌿 Natalia Help Project — NHP</div>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="#how">Как это работает</a>
+      <a href="#support">Поддержать</a>
+      <a href="#faq">FAQ</a>
+      <a href="#share">Поделиться</a>
+      <a href="nataliahelp-en.html" class="lang-link">EN 🇬🇧</a>
+    </nav>
+  </header>
 
   <main>
-    <section class="card" id="intro">
-      <h2 id="intro-title">Добро пожаловать!</h2>
-      <p id="intro-text">
-        Я создала этот проект, потому что, как и многие, не получила наследства и всё в жизни строю сама.
-        Работаю с 16 лет, но накопить на жильё и стабильность — трудно.  
-        Natalia Help Project — это честный проект взаимопомощи, где каждый может внести немного сегодня и
-        получить поддержку завтра. Всё прозрачно, с уважением и доверием.
-      </p>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Вместе мы сильнее 🌿</h1>
+        <p>Честная взаимопомощь без чудес и пирамид. Люди помогают людям — прозрачно и по-человечески. Автор проекта — <strong>Natalia Domkina</strong>.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#apply">Подать заявку 💌</a>
+          <a class="btn ghost" href="#support">Поддержать проект 💚</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><span id="participants">0</span><small>участников</small></div>
+          <div class="stat"><span id="fund">0</span> €<small>в общей кассе</small></div>
+          <div class="stat"><span>100% онлайн</span><small>прозрачно</small></div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2 id="title-support">💚 Поддержи проект</h2>
-      <p id="desc-support">Каждый вклад помогает нашему сообществу взаимопомощи становиться сильнее.</p>
-      <a class="btn" id="btn-paypal" href="https://paypal.me/NataliaDomkina" target="_blank" rel="noopener">💸 Поддержать через PayPal</a>
-      <a class="btn" id="btn-revolut" href="https://revolut.me/n_domkina" target="_blank" rel="noopener">💶 Поддержать через Revolut</a>
+    <!-- How it works -->
+    <section id="how" class="section card">
+      <h2>Как это работает</h2>
+      <p class="section-intro">Ежемесячные взносы формируют фонд. Выплаты идут по очереди. Чем больше нас — тем быстрее очередь.</p>
+      <div class="three-steps steps-grid">
+        <div class="step">
+          <div class="step-num">1️⃣</div>
+          <h3>Взнос</h3>
+          <p>Ты вносишь посильную сумму ежемесячно. Сумму можно менять.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2️⃣</div>
+          <h3>Фонд</h3>
+          <p>Общая касса распределяется по очереди. Часть идёт в резерв для стабильности.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3️⃣</div>
+          <h3>Выплата</h3>
+          <p>Когда подходит твоя очередь — получаешь поддержку и помогаешь дальше.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2 id="title-stats">📊 Статистика проекта</h2>
-      <p>💚 <span id="label-participants">Участников</span>: <span id="participants">0</span></p>
-      <p>💶 <span id="label-total">Общий вклад</span>: <span id="total">0</span> €</p>
-      <p>👁️ <span id="label-views">Посетителей сайта</span>:</p>
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnataliahelp.netlify.app&count_bg=%2322B389&title_bg=%23043D3D&icon=leaf.svg&icon_color=%23FFFFFF&title=Просмотры&edge_flat=false" alt="Просмотры">
+    <!-- Calculator -->
+    <section id="calc" class="section card">
+      <h2>Калькулятор выплаты</h2>
+      <p class="section-intro">Оценка, чтобы понять механику. Реальные сроки зависят от количества участников и взносов.</p>
+      <div class="calc-box">
+        <label for="contribution">Твой ежемесячный взнос (€):</label>
+        <input type="number" id="contribution" min="10" step="5" placeholder="Например, 50">
+        <button class="btn primary" onclick="calculatePayout()">Рассчитать</button>
+        <p id="result" class="calc-result muted">Подсказка: месяцев ≈ 10 000 € / твой взнос.</p>
+      </div>
     </section>
 
-    <section class="card">
-      <h2 id="title-share">📢 Поделись с друзьями</h2>
-      <p id="desc-share">Расскажи о проекте Natalia Help и помоги другим присоединиться 💚</p>
-      <button onclick="shareProject()" id="btn-share">🔗 Поделиться проектом</button>
+    <!-- Queue -->
+    <section id="queue" class="section card">
+      <h2>Пример очереди и прогноза</h2>
+      <div class="queue-grid">
+        <div class="queue-form">
+          <label for="queuePos">Твоя позиция в очереди:</label>
+          <input type="number" id="queuePos" min="1" placeholder="Например, 120">
+          <label for="queueTotal">Всего участников:</label>
+          <input type="number" id="queueTotal" min="1" placeholder="Например, 1000">
+          <label for="queueContrib">Взнос участника (€):</label>
+          <input type="number" id="queueContrib" min="10" placeholder="Например, 50">
+          <button class="btn secondary" onclick="showQueue()">Показать рядом</button>
+          <p class="muted small">Приближение: ⌊общий фонд / 10 000 €⌋ человек получают в месяц.</p>
+        </div>
+        <div class="queue-table-wrapper">
+          <table class="queue-table">
+            <thead><tr><th>№</th><th>Месяцев до выплаты</th><th>Бонус</th></tr></thead>
+            <tbody id="queueTableBody"><tr><td colspan="3" class="muted">Заполни поля и нажми «Показать рядом»</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparency -->
+    <section id="transparency" class="section">
+      <h2>Прозрачность и доверие</h2>
+      <div class="features">
+        <div class="feature"><span class="icon">📊</span><h3>Публичные отчёты</h3><p>Собрано, выплачено, резерв — доступно участникам.</p></div>
+        <div class="feature"><span class="icon">🛟</span><h3>Резервный фонд</h3><p>1–3 месяца выплат, чтобы сглаживать колебания.</p></div>
+        <div class="feature"><span class="icon">🔐</span><h3>Конфиденциальность</h3><p>Истории публикуются только с согласия.</p></div>
+      </div>
+    </section>
+
+    <!-- BIG, HUMAN FAQ -->
+    <section id="faq" class="section card">
+      <h2>FAQ — честные ответы</h2>
+      <details class="faq-item" open>
+        <summary>Почему я создала этот проект?</summary>
+        <p>Я начала работать в 16 лет. У меня не было наследства, и своего жилья у меня до сих пор нет. Я знаю, как это — трудиться всю жизнь и всё равно считать каждый евро. Таких, как я, — миллионы. Этот проект — о взаимной поддержке без стыда и ярлыков, где каждый может вдохнуть спокойнее и сделать шаг к своей цели. Автор и координатор — <strong>Natalia Domkina</strong>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Это благотворительность или попрошайничество?</summary>
+        <p>Это не попрошайничество. Это честная взаимная поддержка. Люди добровольно вносят посильные суммы, чтобы сегодня помочь другим, а завтра — иметь право на помощь сами. Без посредников, без “чудес”, с прозрачными правилами и уважением к каждому.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Откуда берутся деньги для выплат?</summary>
+        <p>Фонд формируется из ежемесячных взносов участников. Мы распределяем по очереди, а часть держим в резерве, чтобы не было задержек. Чем больше сообщество — тем быстрее движется очередь.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Сколько ждать свою очередь?</summary>
+        <p>Зависит от общего фонда и количества участников. Оценку можно увидеть в калькуляторе выше и в примере очереди. Это не гарантия, а прозрачная логика.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Можно ли участвовать анонимно и выйти в любой момент?</summary>
+        <p>Да. Истории и суммы публикуются только с согласия. Участие добровольное: можно менять взнос или выйти в любой момент. Уже внесённые средства остаются в фонде как твой вклад в добро.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Как помочь проекту, если я не готов(а) участвовать?</summary>
+        <p>Можно внести любой донат, рассказать друзьям, поддержать информационно. Даже 1 € ускоряет очередь и приближает чью-то мечту.</p>
+      </details>
+    </section>
+
+    <!-- Apply -->
+    <section id="apply" class="section card">
+      <h2>Подать заявку на помощь 💌</h2>
+      <p class="section-intro">Напиши честно, на что нужна поддержка. Это останется между нами.</p>
+      <form action="https://formspree.io/f/xvgwyayy" method="POST" class="apply-form">
+        <input type="text" name="name" placeholder="Твоё имя" required>
+        <input type="email" name="email" placeholder="Email для связи" required>
+        <textarea name="story" rows="4" placeholder="Опиши цель и сумму…" required></textarea>
+        <input type="number" name="sum" min="10" step="5" placeholder="Желаемая сумма (€)" required>
+        <button type="submit" class="btn primary">Отправить заявку 💚</button>
+      </form>
+      <p class="muted small">Если форма не отправляется — напиши на email: <a href="mailto:panina19771977@gmail.com">panina19771977@gmail.com</a></p>
+    </section>
+
+    <!-- Support -->
+    <section id="support" class="section card support-card">
+      <h2>Поддержать проект 💚</h2>
+      <p>Даже 1 € ускоряет очередь и даёт кому-то шанс сегодня.</p>
+      <div class="support-buttons">
+        <a class="btn gold" href="https://paypal.me/NataliaDomkina" target="_blank" rel="noreferrer">💚 PayPal — @Natalia Domkina</a>
+        <a class="btn green" href="https://revolut.me/n_domkina" target="_blank" rel="noreferrer">💜 Revolut — @n_domkina</a>
+      </div>
+    </section>
+
+    <!-- Share -->
+    <section id="share" class="section card">
+      <h2>Поделись проектом</h2>
+      <p class="section-intro">Чем больше нас — тем быстрее очередь. Твоя история может вдохновить тысяч.</p>
+      <div class="share-buttons">
+        <a class="share-btn" href="https://t.me/share/url?url=https://nataliahelp-project.netlify.app&text=Присоединяйся%20к%20Natalia%20Help%20Project%20—%20честная%20взаимопомощь" target="_blank">Telegram</a>
+        <a class="share-btn" href="https://wa.me/?text=Natalia%20Help%20Project%20https://nataliahelp-project.netlify.app" target="_blank">WhatsApp</a>
+        <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://nataliahelp-project.netlify.app" target="_blank">Facebook</a>
+        <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://nataliahelp-project.netlify.app&text=Natalia%20Help%20Project%20—%20Together%20We’re%20Stronger" target="_blank">X / Twitter</a>
+        <a class="share-btn" href="mailto:?subject=Проект%20взаимопомощи%20Natalia%20Help&body=Посмотри%20этот%20проект:%20https://nataliahelp-project.netlify.app" target="_blank">Email</a>
+      </div>
     </section>
   </main>
 
-  <footer id="footer">
-    © 2025 Natalia Help Project — NHP | Вместе сильнее 🌿
+  <footer class="footer">
+    <p>✉️ Email: <a href="mailto:panina19771977@gmail.com">panina19771977@gmail.com</a></p>
+    <p>💚 Поддержать: <a href="https://paypal.me/NataliaDomkina" target="_blank" rel="noreferrer">PayPal</a> · <a href="https://revolut.me/n_domkina" target="_blank" rel="noreferrer">Revolut</a></p>
+    <p>© 2025 Natalia Domkina — Natalia Help Project — NHP | Вместе мы сильнее 🌿</p>
   </footer>
 
-  <script>
-    // Данные
-    const participants = 48;
-    const total = participants * 10;
-
-    // Статистика
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("participants").textContent = participants;
-      document.getElementById("total").textContent = total;
-    });
-
-    // Поделиться
-    function shareProject() {
-      const url = "https://nataliahelp.netlify.app";
-      const text = currentLang === "ru"
-        ? "💚 Присоединяйся к Natalia Help Project — вместе мы сильнее!"
-        : "💚 Join the Natalia Help Project — together we are stronger!";
-      if (navigator.share) {
-        navigator.share({ title: "Natalia Help Project", text, url });
-      } else {
-        alert((currentLang === "ru" ? "Скопируй ссылку: " : "Copy the link: ") + url);
-      }
-    }
-
-    // Языки
-    let currentLang = navigator.language.startsWith("en") ? "en" : "ru";
-    const langToggle = document.getElementById("langToggle");
-
-    const texts = {
-      ru: {
-        introTitle: "Добро пожаловать!",
-        introText: "Я создала этот проект, потому что, как и многие, не получила наследства и всё в жизни строю сама. Работаю с 16 лет, но накопить на жильё и стабильность — трудно. Natalia Help Project — это честный проект взаимопомощи, где каждый может внести немного сегодня и получить поддержку завтра. Всё прозрачно, с уважением и доверием.",
-        support: "💚 Поддержи проект",
-        desc: "Каждый вклад помогает нашему сообществу взаимопомощи становиться сильнее.",
-        paypal: "💸 Поддержать через PayPal",
-        revolut: "💶 Поддержать через Revolut",
-        stats: "📊 Статистика проекта",
-        participants: "Участников",
-        total: "Общий вклад",
-        views: "Посетителей сайта",
-        share: "📢 Поделись с друзьями",
-        descShare: "Расскажи о проекте Natalia Help и помоги другим присоединиться 💚",
-        btnShare: "🔗 Поделиться проектом",
-        footer: "© 2025 Natalia Help Project — NHP | Вместе сильнее 🌿",
-      },
-      en: {
-        introTitle: "Welcome!",
-        introText: "I created this project because, like many others, I didn’t inherit anything and build everything on my own. I’ve been working since I was 16, but saving for housing and stability is hard. Natalia Help Project is an honest mutual aid community — everyone can give a little today and receive support tomorrow. Transparent, fair, and kind.",
-        support: "💚 Support the Project",
-        desc: "Every contribution helps our mutual aid community grow stronger.",
-        paypal: "💸 Support via PayPal",
-        revolut: "💶 Support via Revolut",
-        stats: "📊 Project Statistics",
-        participants: "Participants",
-        total: "Total Contribution",
-        views: "Visitors",
-        share: "📢 Share with Friends",
-        descShare: "Tell others about Natalia Help and help them join 💚",
-        btnShare: "🔗 Share Project",
-        footer: "© 2025 Natalia Help Project — Together we are stronger 🌿",
-      }
-    };
-
-    function updateLanguage(lang) {
-      const t = texts[lang];
-      document.getElementById("intro-title").textContent = t.introTitle;
-      document.getElementById("intro-text").textContent = t.introText;
-      document.getElementById("title-support").textContent = t.support;
-      document.getElementById("desc-support").textContent = t.desc;
-      document.getElementById("btn-paypal").textContent = t.paypal;
-      document.getElementById("btn-revolut").textContent = t.revolut;
-      document.getElementById("title-stats").textContent = t.stats;
-      document.getElementById("label-participants").textContent = t.participants;
-      document.getElementById("label-total").textContent = t.total;
-      document.getElementById("label-views").textContent = t.views;
-      document.getElementById("title-share").textContent = t.share;
-      document.getElementById("desc-share").textContent = t.descShare;
-      document.getElementById("btn-share").textContent = t.btnShare;
-      document.getElementById("footer").textContent = t.footer;
-      langToggle.textContent = lang === "ru" ? "EN" : "RU";
-    }
-
-    langToggle.addEventListener("click", () => {
-      currentLang = currentLang === "ru" ? "en" : "ru";
-      updateLanguage(currentLang);
-    });
-
-    updateLanguage(currentLang);
-  </script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>

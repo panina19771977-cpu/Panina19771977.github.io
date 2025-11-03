@@ -1,60 +1,93 @@
-// Calculator and queue utils
-const TOTAL_PAYOUT = 10000;
+/* =========================================================
+   Natalia Help Project — Script
+   Author: Natalia Domkina
+   Smooth transitions, calculator, queue, alerts, counters
+   ========================================================= */
 
-function fmtMonths(m){
-  const years = Math.floor(m/12);
-  const months = Math.round(m % 12);
-  return `${years} лет и ${months} мес (${Math.round(m)} мес)`;
-}
+document.addEventListener("DOMContentLoaded", () => {
+  // плавное появление
+  document.body.classList.add("page-loaded");
 
-function calcPayoutMonths(contribution){
-  return TOTAL_PAYOUT / contribution;
-}
+  // плавный уход при переходе по .html ссылкам (внутри сайта)
+  document.querySelectorAll('a[href$=".html"]').forEach(link => {
+    link.addEventListener("click", (e) => {
+      if (link.target === "_blank") return;
+      e.preventDefault();
+      const href = link.getAttribute("href");
+      document.body.classList.remove("page-loaded");
+      document.body.style.opacity = "0";
+      setTimeout(() => window.location.href = href, 500);
+    });
+  });
 
-function handleCalc(formId, outId){
-  const form = document.getElementById(formId);
-  const out = document.getElementById(outId);
-  const c = parseFloat(form.contribution.value);
-  if (!c || c<=0){ out.textContent = "Введите взнос больше 0 €"; return; }
-  const m = calcPayoutMonths(c);
-  out.textContent = `Чтобы собрать 10 000 €, потребуется примерно ${fmtMonths(m)}.`;
-}
+  // анимация чисел в hero (участники/фонд), если элементы есть
+  animateCount("participants", 0, 26, 1400, "ru-RU");
+  animateCount("fund", 0, 2600, 1600, "ru-RU");
 
-function buildQueue(tableId, position, participants, monthlyContribution){
-  const tbody = document.querySelector(`#${tableId} tbody`);
-  tbody.innerHTML = "";
-  const monthlyFund = participants * monthlyContribution;
-  const winnersPerMonth = Math.max(1, Math.floor(monthlyFund / TOTAL_PAYOUT));
-  const start = Math.max(1, position-5);
-  const end = Math.min(participants, position+4);
-  for(let i=start;i<=end;i++){
-    const monthsUntil = Math.ceil(i / winnersPerMonth);
-    const lucky = (Math.random() < 0.05) ? "Да" : "—";
-    const tr = document.createElement("tr");
-    tr.innerHTML = `<td>${i}</td><td>${monthsUntil}</td><td>${lucky}</td>`;
-    if (i===position){ tr.style.background = "#ecfdf5";}
-    tbody.appendChild(tr);
+  // форма: короткое подтверждение
+  const form = document.querySelector("form.apply-form");
+  if (form) {
+    form.addEventListener("submit", () => {
+      setTimeout(() => alert("Спасибо! Заявка отправлена 💚"), 80);
+    });
   }
-}
+});
 
-function handleQueue(formId, tableId){
-  const f = document.getElementById(formId);
-  const pos = parseInt(f.position.value);
-  const ppl = parseInt(f.participants.value);
-  const cont = parseFloat(f.monthly.value);
-  if(!pos || !ppl || !cont || pos>ppl){
-    alert("Проверьте номер, взнос и число участников.");
+/* -------- калькулятор выплат -------- */
+function calculatePayout(){
+  const input = document.getElementById("contribution");
+  const result = document.getElementById("result");
+  if(!input || !result) return;
+
+  const val = Number(input.value);
+  if(!val || val < 10){
+    result.innerHTML = "Введите сумму не меньше 10 €.";
     return;
   }
-  buildQueue(tableId, pos, ppl, cont);
+  const months = Math.ceil(10000 / val);
+  result.innerHTML = `Примерно столько месяцев до выплаты: <strong>${months}</strong>. Это оценка, не гарантия.`;
 }
 
-// Simple navbar highlight
-(function(){
-  const links = document.querySelectorAll('nav .links a');
-  links.forEach(a=>{
-    if (a.getAttribute('href') === location.pathname.split('/').pop()) {
-      a.style.background = '#fff1';
-    }
-  });
-})();
+/* -------- очередь / прогноз -------- */
+function showQueue(){
+  const pos = Number(document.getElementById("queuePos").value);
+  const total = Number(document.getElementById("queueTotal").value);
+  const contrib = Number(document.getElementById("queueContrib").value);
+  const tbody = document.getElementById("queueTableBody");
+  if(!pos || !total || !contrib || !tbody) return;
+
+  const fund = total * contrib;                    // общий фонд в мес
+  const pplPerMonth = Math.max(1, Math.floor(fund / 10000)); // сколько людей можно выплатить в мес
+  const start = Math.max(1, pos - 3);
+  const end = Math.min(total, pos + 3);
+
+  let rows = "";
+  for(let i=start;i<=end;i++){
+    const m = Math.ceil(i / pplPerMonth);
+    rows += `<tr${i===pos ? ' class="highlight-row"' : ''}>
+      <td>${i}</td>
+      <td>${m}</td>
+      <td>${(i%10===0)?'🎁':''}</td>
+    </tr>`;
+  }
+  rows += `<tr><td colspan="3" class="muted small">
+    Всего фонд: ${fund.toLocaleString("ru-RU")} € · Выплачиваем в месяц: ${pplPerMonth} чел.
+  </td></tr>`;
+
+  tbody.innerHTML = rows;
+}
+
+/* -------- утилита: анимация чисел -------- */
+function animateCount(id, start, end, duration, locale="en-US"){
+  const el = document.getElementById(id);
+  if(!el) return;
+  let startTime = null;
+  function step(ts){
+    if(!startTime) startTime = ts;
+    const p = Math.min((ts - startTime)/duration, 1);
+    const val = Math.floor(start + (end - start)*p);
+    el.textContent = val.toLocaleString(locale);
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
