@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О проекте — Help Project</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      color: #333;
+      text-align: center;
+      padding: 40px 20px;
+      margin: 0;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.8);
+      margin: auto;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      color: #2a8c77;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background-color: #3bb19b;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #2a8c77;
+    }
+    .lang-switch {
+      margin-top: 20px;
+    }
+    .lang-btn {
+      margin: 0 10px;
+      cursor: pointer;
+      color: #3bb19b;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">О проекте Help Project 🌿</h1>
+    <p id="text">
+      <strong>Help Project</strong> — это пространство взаимопомощи и доброты.  
+      Здесь люди объединяются, чтобы поддерживать друг друга, собирать средства и вдохновлять.  
+      Каждый может рассказать свою историю и получить помощь 💚
+    </p>
+    <p id="link">
+      Наш сайт: <a href="https://nataliahelp.netlify.app">nataliahelp.netlify.app</a>
+    </p>
 
+    <a href="index.html" class="btn">🏠 На главную</a>
+    <a href="apply.html" class="btn">💌 Подать заявку</a>
+
+    <div class="lang-switch">
+      <span class="lang-btn" onclick="setLang('ru')">Русский 🇷🇺</span> |
+      <span class="lang-btn" onclick="setLang('en')">English 🇬🇧</span>
+    </div>
+  </div>
+
+  <script>
+    const content = {
+      ru: {
+        title: "О проекте Help Project 🌿",
+        text: "Help Project — это пространство взаимопомощи и доброты. Здесь люди объединяются, чтобы поддерживать друг друга, собирать средства и вдохновлять. Каждый может рассказать свою историю и получить помощь 💚",
+        link: "Наш сайт: <a href='https://nataliahelp.netlify.app'>nataliahelp.netlify.app</a>"
+      },
+      en: {
+        title: "About Help Project 🌿",
+        text: "Help Project is a space of kindness and mutual support. Here people unite to help each other, raise funds and inspire. Everyone can share their story and receive help 💚",
+        link: "Our website: <a href='https://nataliahelp.netlify.app'>nataliahelp.netlify.app</a>"
+      }
+    };
+
+    function setLang(lang) {
+      document.getElementById("title").innerText = content[lang].title;
+      document.getElementById("text").innerHTML = content[lang].text;
+      document.getElementById("link").innerHTML = content[lang].link;
+    }
+  </script>
+</body>
+</html>
