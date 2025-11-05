@@ -90,4 +90,17 @@ function animateCount(id, start, end, duration, locale="en-US"){
     if(p<1) requestAnimationFrame(step);
   }
   requestAnimationFrame(step);
+  // --- плавное появление блока "Проект только начинается"
+const newStart = document.querySelector('.new-start');
+if (newStart) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(newStart);
+}
 }
