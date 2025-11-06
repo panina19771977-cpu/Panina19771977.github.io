@@ -102,5 +102,41 @@ if (newStart) {
   }, { threshold: 0.3 });
 
   observer.observe(newStart);
+  // --- Отслеживание действий пользователей ---
+function trackEvent(eventCategory, eventAction, eventLabel) {
+  if (typeof gtag === "function") {
+    gtag("event", eventAction, {
+      event_category: eventCategory,
+      event_label: eventLabel
+    });
+  }
 }
+
+// Клик по кнопке PayPal
+document.querySelectorAll('[href*="paypal"]').forEach(btn => {
+  btn.addEventListener("click", () => {
+    trackEvent("donation", "click", "PayPal button");
+  });
+});
+
+// Клик по кнопке Revolut
+document.querySelectorAll('[href*="revolut"]').forEach(btn => {
+  btn.addEventListener("click", () => {
+    trackEvent("donation", "click", "Revolut button");
+  });
+});
+
+// Клик по кнопке Поделиться
+document.querySelectorAll('[href*="share"], .share-btn').forEach(btn => {
+  btn.addEventListener("click", () => {
+    trackEvent("engagement", "click", "Share button");
+  });
+});
+
+// Отправка формы Formspree
+const form = document.querySelector("form");
+if (form) {
+  form.addEventListener("submit", () => {
+    trackEvent("form", "submit", "Application Form");
+  });
 }
