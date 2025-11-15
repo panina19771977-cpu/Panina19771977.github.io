@@ -1,54 +1,131 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Отчёты — Natalia Help Project 🌿</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="nhp-favicon-180.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Отчётность — Платформа Взаимопомощи</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="logo">🌿 Natalia Help Project — NHP</div>
-    <nav class="main-nav">
-      <a href="index.html">Главная</a>
-      <a href="reports.html">Отчёты</a>
-      <a href="faq.html">FAQ</a>
-      <a href="nataliahelp-en.html" class="lang-link">EN 🇬🇧</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="section card">
-      <h1>Прозрачные отчёты 📊</h1>
-      <p class="section-intro">Все данные открыты для участников проекта.  
-      Это важно для доверия и честности 💚</p>
+<header>
+  <h1>Платформа&nbsp;Взаимопомощи</h1>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="queue.html">Участники</a>
+    <a href="apply.html">Добавить&nbsp;себя</a>
+    <a href="reports.html">Отчётность</a>
+    <div class="lang-switch">
+      <button>RU</button>
+      <button onclick="window.location='reports-en.html'">EN</button>
+    </div>
+  </nav>
+</header>
 
-      <table class="queue-table">
-        <thead>
-          <tr>
-            <th>Месяц</th>
-            <th>Собрано (€)</th>
-            <th>Выплачено (€)</th>
-            <th>Резерв (€)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Октябрь 2025</td><td>2 600</td><td>2 000</td><td>600</td></tr>
-          <tr><td>Ноябрь 2025</td><td>3 150</td><td>2 400</td><td>750</td></tr>
-          <tr><td>Декабрь 2025</td><td>3 980</td><td>3 000</td><td>980</td></tr>
-        </tbody>
-      </table>
+<section>
+  <div class="container">
+    <h3>Прозрачная отчётность</h3>
 
-      <p class="muted small">Данные обновляются вручную и служат примером прозрачности.  
-      В будущем здесь появятся автоматические отчёты 🌿</p>
-    </section>
-  </main>
+    <p>Платформа Взаимопомощи работает честно и открыто.  
+       Все движения средств, комиссионные расходы и распределение помощи доступны для просмотра.</p>
 
-  <footer class="footer">
-    <p>© 2025 Natalia Domkina — Natalia Help Project — NHP</p>
-  </footer>
+    <p>Здесь представлена текущая отчётность.  
+       По мере роста платформы раздел будет расширяться.</p>
 
-  <script src="script.js"></script>
+    <hr style="border:0;border-bottom:1px solid var(--gold);margin:40px auto;width:60%">
+
+    <h3>Поступления</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Дата</th>
+          <th>Источник</th>
+          <th>Сумма (€)</th>
+          <th>Комментарий</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01.02.2025</td>
+          <td>PayPal</td>
+          <td>50</td>
+          <td>Пожертвование</td>
+        </tr>
+        <tr>
+          <td>03.02.2025</td>
+          <td>Revolut</td>
+          <td>10</td>
+          <td>Взнос участника</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:50px;">Выданная помощь</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Дата</th>
+          <th>Участник</th>
+          <th>Цель</th>
+          <th>Сумма (€)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10.02.2025</td>
+          <td>Анна</td>
+          <td>Квартира</td>
+          <td>10 000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:50px;">Комиссионные расходы</h3>
+
+    <p>Комиссия удерживается только на обслуживание и развитие платформы:</p>
+
+    <ul>
+      <li>оплата сервера и домена;</li>
+      <li>поддержка сайта;</li>
+      <li>защита и шифрование данных;</li>
+      <li>модернизация функционала;</li>
+      <li>техническая поддержка;</li>
+      <li>мониторинг стабильности.</li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Дата</th>
+          <th>Статья расхода</th>
+          <th>Сумма (€)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>05.02.2025</td>
+          <td>Хостинг и обслуживание</td>
+          <td>6</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="text-align:center; margin-top:40px;">
+      <button class="button" onclick="window.location='index.html'">Вернуться на главную</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© Платформа Взаимопомощи — добровольная поддержка людей</p>
+    <p><a href="index.html">Главная</a> | <a href="queue.html">Участники</a> | <a href="apply.html">Добавить себя</a></p>
+  </div>
+</footer>
+
 </body>
 </html>

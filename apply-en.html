@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutual Support Platform — Application Form</title>
+  <meta name="description" content="Submit your application to join the Mutual Support Platform. Housing goals only: apartment, house, land, renovation or down payment. Voluntary participation. Transparent queue.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S002SKDYR4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S002SKDYR4');
+  </script>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">Mutual Support Platform</div>
+
+  <nav class="nav">
+    <a href="nataliahelp-en.html">Home</a>
+    <a href="about-en.html">About</a>
+    <a href="rules-en.html">Terms</a>
+    <a href="queue-en.html">Queue</a>
+    <a href="reports-en.html">Reports</a>
+    <a href="community-en.html">Community</a>
+    <a href="faq-en.html">FAQ</a>
+
+    <!-- Language switch -->
+    <div class="lang-switch">
+      <a href="apply.html">RU</a>
+      <a href="apply-en.html" class="active">EN</a>
+    </div>
+  </nav>
+</header>
+
+<section class="section">
+  <h1>Application Form</h1>
+  <p class="intro">
+    Please fill out this form to join the Mutual Support Platform.
+    We accept only housing-related goals: apartment, house, land, renovation or mortgage down payment.
+  </p>
+
+  <form class="apply-form" action="https://formspree.io/f/xvgwyayy" method="POST">
+
+    <label>Your Name *</label>
+    <input type="text" name="name" required>
+
+    <label>Email *</label>
+    <input type="email" name="email" required>
+
+    <label>Country / City *</label>
+    <input type="text" name="location" required>
+
+    <label>Requested Support Amount (€) *</label>
+    <select name="amount" required>
+      <option value="">Select</option>
+      <option value="10000">10 000€</option>
+      <option value="20000">20 000€</option>
+      <option value="30000">30 000€</option>
+      <option value="40000">40 000€</option>
+      <option value="50000">50 000€</option>
+    </select>
+
+    <label>Describe Your Housing Goal *</label>
+    <textarea name="goal" rows="4" required placeholder="For example: down payment, apartment purchase, renovation, house, land..."></textarea>
+
+    <label>Your Voluntary Monthly Contribution *</label>
+    <select name="donation" required>
+      <option value="">Select</option>
+      <option value="10">10€</option>
+      <option value="50">50€</option>
+      <option value="100">100€</option>
+    </select>
+
+    <label>Comment (optional)</label>
+    <textarea name="comment" rows="3" placeholder="Additional information if needed"></textarea>
+
+    <button type="submit" class="btn-primary">Submit Application</button>
+  </form>
+</section>
+
+<section class="section">
+  <h2>Ways to Support the Platform</h2>
+
+  <div class="donate-buttons">
+    <a class="btn-secondary" href="https://paypal.me/NataliaDomkina" target="_blank">PayPal</a>
+    <a class="btn-secondary" href="https://revolut.me/n_domkina" target="_blank">Revolut</a>
+  </div>
+
+  <p class="note">
+    Voluntary support helps the queue move faster and allows more participants to reach their goals.
+  </p>
+</section>
+
+<footer class="footer">
+  © Mutual Support Platform
+</footer>
+
+</body>
+</html>

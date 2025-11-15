@@ -1,66 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Стать участником — Natalia Help</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Добавить себя — Платформа Взаимопомощи</title>
+
+<style>
+:root {
+  --graphite: #2b2b2b;
+  --silver: #cfcfcf;
+  --indigo: #273859;
+  --gold: #bca972;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: var(--white);
+  color: var(--graphite);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--graphite);
+  color: var(--silver);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 22px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+header a {
+  color: var(--silver);
+  text-decoration: none;
+  margin-left: 15px;
+}
+header a:hover {
+  color: var(--gold);
+}
+
+main {
+  max-width: 600px;
+  margin: 80px auto;
+  background: var(--silver);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  color: var(--indigo);
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: var(--graphite);
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+  font-size: 15px;
+  background: var(--white);
+}
+
+form button {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  background-color: var(--gold);
+  color: var(--graphite);
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+form button:hover {
+  background-color: var(--indigo);
+  color: var(--white);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 10px;
+  background-color: var(--graphite);
+  color: var(--silver);
+  font-size: 14px;
+}
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+footer a:hover { text-decoration: underline; }
+</style>
 </head>
+
 <body>
-<header class="hero">
-  <div class="container">
-    <nav>
-      <a class="brand" href="index.html"><span class="logo">🌿</span><b>Natalia Help</b></a>
-      <div class="links">
-        <a href="about.html">О проекте</a>
-        <a href="faq.html">FAQ</a>
-        <a href="apply.html" class="cta">Стать участником</a>
-      </div>
-    </nav>
-    <h1>Заявка на участие</h1>
-    <p>Заполните форму — мы свяжемся и подтвердим регистрацию.</p>
+
+<header>
+  <h1>Платформа&nbsp;Взаимопомощи</h1>
+  <div>
+    <a href="index.html">Главная</a>
+    <a href="queue.html">Участники</a>
+    <a href="rules.html">Условия</a>
   </div>
 </header>
-<main class="container">
-  <section class="card">
-    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-      <!-- TODO: замените YOUR_FORMSPREE_ID на ваш ID вида f/xyzabcde -->
-      <label>Ваше имя</label>
-      <input type="text" name="name" required>
-      <label>Email</label>
-      <input type="email" name="email" required>
-      <label>Ежемесячный взнос (€)</label>
-      <select name="tier">
-        <option>50</option><option selected>100</option><option>150</option><option>200</option>
-      </select>
-      <label>Комментарий (по желанию)</label>
-      <textarea name="message" rows="4" placeholder="Расскажите о своей цели..."></textarea>
-      <input type="hidden" name="_subject" value="Новая заявка на участие">
-      <button type="submit">Отправить заявку</button>
-    </form>
-    <p class="small">После отправки вы получите подтверждение на email. Если форма не работает, проверьте ID Formspree.</p>
-  </section>
 
-  <section>
-    <h2>Мгновенная поддержка</h2>
-    <div class="grid cols-3">
-      <div class="card">
-        <h3>Поддержать проект</h3>
-        <p>Вы можете сделать добровольный взнос любым удобным способом.</p>
-        <a class="cta" href="#" onclick="alert('Вставьте вашу ссылку на оплату (Revolut/PayPal)');return false;">Оплатить</a>
-      </div>
-      <div class="card">
-        <h3>Реферальная программа</h3>
-        <p>Пригласите друзей и получите дополнительный шанс на раннюю выплату.</p>
-      </div>
-      <div class="card">
-        <h3>Вопросы?</h3>
-        <p>Пишите на <a href="mailto:info@natalia-help.example">info@natalia-help.example</a></p>
-      </div>
-    </div>
-  </section>
+<main>
+  <h2>Добавить себя</h2>
+  <p style="text-align:center; color:var(--graphite); font-size:16px;">
+    Заполните короткую форму, чтобы стать участником Платформы Взаимопомощи.
+    После отправки вы получите подтверждение на почту.
+  </p>
+
+  <form action="https://formspree.io/f/xvgwyayy" method="POST">
+    <label>Имя</label>
+    <input type="text" name="name" placeholder="Ваше имя" required>
+
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Ваш email" required>
+
+    <label>Цель</label>
+    <select name="goal" required>
+      <option value="">Выберите цель</option>
+      <option value="Квартира">Квартира</option>
+      <option value="Дом">Дом</option>
+      <option value="Участок">Участок</option>
+      <option value="Дача">Дача</option>
+      <option value="Другое">Другое</option>
+    </select>
+
+    <label>Желаемая сумма (€)</label>
+    <input type="number" name="amount" placeholder="Введите сумму" min="10" required>
+
+    <label>Комментарий</label>
+    <textarea name="message" rows="4" placeholder="Коротко о вашей цели..."></textarea>
+
+    <button type="submit">Отправить заявку</button>
+  </form>
 </main>
-<footer><div class="container">© 2025 Natalia Help</div></footer>
-<script src="script.js"></script>
+
+<footer>
+  © Платформа Взаимопомощи — добровольная поддержка людей<br>
+  <a href="index.html">Вернуться на главную</a>
+</footer>
+
 </body>
 </html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Платформа Взаимопомощи — Очередь участников</title>
+  <meta name="description" content="Прозрачная очередь участников Платформы Взаимопомощи. Только цели, связанные с жильём. Добровольное участие.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S002SKDYR4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S002SKDYR4');
+  </script>
+
+  <style>
+    /* PREMIUM TABLE STYLE */
+    .queue-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1f1f1f; 
+      color: #e0e0e0;
+      border: 1px solid #555;
+      margin-top: 25px;
+      font-size: 16px;
+    }
+
+    .queue-table th {
+      background: #2b2b2b;
+      padding: 12px;
+      font-weight: 600;
+      border-bottom: 2px solid #bca972; 
+      text-align: left;
+      color: #bca972;
+    }
+
+    .queue-table td {
+      padding: 12px;
+      border-bottom: 1px solid #444;
+    }
+
+    .queue-table tr:hover {
+      background: #2a2a2a;
+    }
+
+    .status {
+      font-weight: 600;
+    }
+
+    .waiting { color: #e0e0e0; }      
+    .priority { color: #bca972; }     
+    .received { color: #6abf4b; }     
+    .supporting { color: #4da6ff; }   
+  </style>
+
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">Платформа Взаимопомощи</div>
+
+  <nav class="nav">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О проекте</a>
+    <a href="rules.html">Условия</a>
+    <a href="queue.html" class="active">Очередь</a>
+    <a href="reports.html">Отчёты</a>
+    <a href="community.html">Сообщество</a>
+    <a href="faq.html">FAQ</a>
+
+    <!-- Language Switch -->
+    <div class="lang-switch">
+      <a href="queue.html" class="active">RU</a>
+      <a href="queue-en.html">EN</a>
+    </div>
+  </nav>
+</header>
+
+<section class="section">
+  <h1>Очередь участников</h1>
+  <p class="intro">
+    Здесь представлена актуальная прозрачная очередь участников Платформы Взаимопомощи.
+    Каждый участник указывает цель, связанную с жильём: квартира, дом, участок, ремонт или первоначальный взнос.
+    После получения помощи участник остаётся в проекте и помогает следующим.
+  </p>
+</section>
+
+<section class="section">
+  <h2>Текущая очередь</h2>
+  <p class="note">
+    *Очередь обновляется вручную и отражает актуальный порядок.*
+  </p>
+
+  <table class="queue-table" id="queue">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Инициалы</th>
+        <th>Страна</th>
+        <th>Цель</th>
+        <th>Запрашиваемая сумма</th>
+        <th>Статус</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <!-- ПРИМЕР (удалишь позже) -->
+      <tr>
+        <td>1</td>
+        <td>А.Д.</td>
+        <td>Германия</td>
+        <td>Квартира</td>
+        <td>20 000€</td>
+        <td class="status waiting">⏳ Ожидание</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>М.К.</td>
+        <td>Польша</td>
+        <td>Дом</td>
+        <td>30 000€</td>
+        <td class="status priority">⭐ Приоритет</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>Л.С.</td>
+        <td>Австрия</td>
+        <td>Ремонт</td>
+        <td>10 000€</td>
+        <td class="status supporting">🔁 Участвует</td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+
+<!-- TABLE SORT SCRIPT -->
+<script>
+  function sortTable() {
+    const table = document.getElementById("queue");
+    const rows = Array.from(table.rows).slice(1);
+
+    rows.sort((a, b) => Number(a.cells[0].innerText) - Number(b.cells[0].innerText));
+
+    rows.forEach(row => table.appendChild(row));
+  }
+
+  sortTable();
+</script>
+
+<footer class="footer">
+  © Платформа Взаимопомощи
+</footer>
+
+</body>
+</html>

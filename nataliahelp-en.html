@@ -1,191 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Natalia Help Project — NHP | Together We’re Stronger 🌿</title>
-  <meta name="description" content="Natalia Help Project — honest mutual support. Contribute a little today and receive help tomorrow. Transparent, human and kind. Created by Natalia Domkina.">
-  <meta name="theme-color" content="#1b8f6c">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mutual Support Platform — Together to Your Home</title>
+<meta name="description" content="A transparent support system helping people achieve housing goals — apartment, house, land, or cottage. Voluntary contributions of 10€, 50€, or 100€. Small commission only for platform development.">
+<link rel="stylesheet" href="style.css">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S002SKDYR4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S002SKDYR4');
+</script>
+<!-- End GA -->
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="180x180" href="nhp-favicon-180.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="nhp-favicon-512.png">
-  <link rel="apple-touch-icon" href="nhp-favicon-180.png">
+<!-- FAQ schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"What is the goal of the Mutual Support Platform?",
+      "acceptedAnswer":{"@type":"Answer","text":"To help people reach their housing goals — an apartment, a house, a plot of land, a cottage, or other housing-related needs. Everything is voluntary and transparent."}
+    },
+    {
+      "@type":"Question",
+      "name":"What contributions are possible?",
+      "acceptedAnswer":{"@type":"Answer","text":"Voluntary contributions of 10 €, 50 €, or 100 € — you choose the amount."}
+    },
+    {
+      "@type":"Question",
+      "name":"Where does the commission go?",
+      "acceptedAnswer":{"@type":"Answer","text":"A small commission is used only for platform development: website operation, data security, support, and transparency reports."}
+    },
+    {
+      "@type":"Question",
+      "name":"What happens after I receive support?",
+      "acceptedAnswer":{"@type":"Answer","text":"You remain in the platform and continue supporting others — that's how the queue moves forward."}
+    }
+  ]
+}
+</script>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S002SKDYR4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date()); gtag('config', 'G-S002SKDYR4');
-  </script>
 </head>
-<body data-lang="en">
-  <header class="topbar">
-    <div class="logo">🌿 Natalia Help Project — NHP</div>
-    <nav class="main-nav">
-      <a href="nataliahelp-en.html">Home</a>
-      <a href="#how">How it works</a>
-      <a href="#support">Support</a>
-      <a href="#faq">FAQ</a>
-      <a href="#share">Share</a>
-      <a href="index.html" class="lang-link">RU 🇷🇺</a>
-    </nav>
-  </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Together We’re Stronger 🌿</h1>
-        <p><strong>Natalia Help Project</strong> is a transparent mutual support initiative. Everyone can contribute a little today and receive support tomorrow. No miracles — just people and kindness.</p>
-        <div class="hero-buttons">
-          <a class="btn primary" href="#apply">Apply for help 💌</a>
-          <a class="btn ghost" href="#support">Support project 💚</a>
-        </div>
-      <section class="new-start">
-  <h3>🌱 The Project is Just Starting</h3>
-  <p>We’re launching the Natalia Help Project — a transparent and human-centered
-     space for mutual aid. Be among the first to join and shape the foundation
-     of this honest community.</p>
-  <div class="start-buttons">
-    <a href="#apply" class="button">Apply for Help</a>
-    <a href="#support" class="button-outline">Support the Project</a>
+<body>
+
+<header class="header">
+  <div class="logo">Mutual Support Platform</div>
+
+  <nav class="nav">
+    <a href="nataliahelp-en.html" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#how">How It Works</a>
+    <a href="queue-en.html">Participants</a>
+    <a href="#support">Donate</a>
+    <a href="apply-en.html">Join</a>
+
+    <div class="lang-switch">
+      <a href="index.html">RU</a>
+      <a class="active" href="nataliahelp-en.html">EN</a>
+    </div>
+  </nav>
+</header>
+
+
+<!-- HERO BLOCK -->
+<div class="hero section">
+  <div class="container">
+    <h2>Together to Your Home</h2>
+    <p>The Mutual Support Platform is a place where people unite to help each other achieve one important goal — having their own home. Every contribution brings someone closer to their dream.</p>
+
+    <div class="actions">
+      <a class="btn-primary" href="#about">Learn More</a>
+      <a class="btn-secondary" href="queue-en.html">View Participants</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <h2>About the Project</h2>
+    <hr>
+
+    <p><strong>The Mutual Support Platform</strong> was created for people who work hard but still cannot afford to buy a home on their own. Here, participants make small voluntary contributions — <strong>10€</strong>, <strong>50€</strong>, or <strong>100€</strong> — and the collected funds help people reach their housing goals: an apartment, a house, a plot of land, a cottage, or other housing-related needs.</p>
+
+    <p>After receiving support, participants remain in the project, helping the next ones. Everything is voluntary, transparent, and honest: funds movement and the participant queue are visible on the website.</p>
+
+    <p><strong>Platform commission</strong> is small and used only for development: stable site operation, security, user support, and transparency tools.</p>
   </div>
 </section>
 
-    <!-- How it works -->
-    <section id="how" class="section card">
-      <h2>How it works</h2>
-      <p class="section-intro">Monthly contributions form the fund. Payments go in order. The more people join — the faster the queue moves.</p>
-      <div class="three-steps steps-grid">
-        <div class="step"><div class="step-num">1️⃣</div><h3>Contribute</h3><p>You make a monthly contribution. You can change the amount anytime.</p></div>
-        <div class="step"><div class="step-num">2️⃣</div><h3>Fund</h3><p>Collected money is distributed by order; part is reserved for stability.</p></div>
-        <div class="step"><div class="step-num">3️⃣</div><h3>Receive</h3><p>When your turn comes — you receive support and then help others.</p></div>
-      </div>
-    </section>
 
-    <!-- Calculator -->
-    <section id="calc" class="section card">
-      <h2>Payout Calculator</h2>
-      <p class="section-intro">This helps to understand the logic. Actual speed depends on participants and fund size.</p>
-      <div class="calc-box">
-        <label for="contribution">Your monthly contribution (€):</label>
-        <input type="number" id="contribution" min="10" step="5" placeholder="e.g., 50">
-        <button class="btn primary" onclick="calculatePayout()">Calculate</button>
-        <p id="result" class="calc-result muted">Tip: months ≈ €10,000 / your contribution.</p>
-      </div>
-    </section>
+<!-- HOW IT WORKS -->
+<section id="how" class="section">
+  <div class="container">
+    <h2>How It Works</h2>
+    <hr>
 
-    <!-- Queue -->
-    <section id="queue" class="section card">
-      <h2>Queue Example & Forecast</h2>
-      <div class="queue-grid">
-        <div class="queue-form">
-          <label for="queuePos">Your position:</label>
-          <input type="number" id="queuePos" min="1" placeholder="e.g., 120">
-          <label for="queueTotal">Total participants:</label>
-          <input type="number" id="queueTotal" min="1" placeholder="e.g., 1000">
-          <label for="queueContrib">Contribution per participant (€):</label>
-          <input type="number" id="queueContrib" min="10" placeholder="e.g., 50">
-          <button class="btn secondary" onclick="showQueue()">Show nearby</button>
-          <p class="muted small">Approximation: ⌊fund / €10,000⌋ people are paid each month.</p>
-        </div>
-        <div class="queue-table-wrapper">
-          <table class="queue-table">
-            <thead><tr><th>No.</th><th>Months until payout</th><th>Bonus</th></tr></thead>
-            <tbody id="queueTableBody"><tr><td colspan="3" class="muted">Fill the fields and click “Show nearby”.</td></tr></tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <ol>
+      <li><strong>Contribution.</strong> You make a voluntary contribution — 10€, 50€, or 100€.</li>
+      <li><strong>Queue.</strong> Funds are distributed through a transparent queue.</li>
+      <li><strong>Support.</strong> One participant receives support for their housing goal.</li>
+      <li><strong>Continuity.</strong> After receiving help, you stay and support the next participants.</li>
+    </ol>
 
-    <!-- Transparency -->
-    <section id="transparency" class="section">
-      <h2>Transparency & Trust</h2>
-      <div class="features">
-        <div class="feature"><span class="icon">📊</span><h3>Public Reports</h3><p>Collected, paid, reserve — open to all participants.</p></div>
-        <div class="feature"><span class="icon">🛟</span><h3>Reserve Fund</h3><p>1–3 months of payouts to smooth out fluctuations.</p></div>
-        <div class="feature"><span class="icon">🔐</span><h3>Privacy</h3><p>Stories and amounts are shared only with consent.</p></div>
-      </div>
-    </section>
+    <h2>Why It Works</h2>
+    <hr>
 
-    <!-- FAQ -->
-    <section id="faq" class="section card">
-      <h2>FAQ — Honest Answers</h2>
-      <details class="faq-item" open>
-        <summary>Why did I create this project?</summary>
-        <p>I started working at 16. I never had inheritance or my own home. I know how it feels to work hard all your life and still struggle. There are millions like me. This project is about mutual support without shame, where everyone can breathe easier and move toward their goal. Founder and coordinator — <strong>Natalia Domkina</strong>.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Is this charity or begging?</summary>
-        <p>It’s not begging — it’s mutual support. People voluntarily contribute to help others today and have the right to receive help tomorrow. No middlemen, no miracles — only fairness and transparency.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Where does the money come from?</summary>
-        <p>From monthly contributions. The fund is distributed in order, and part goes to reserve to ensure stability. The more participants — the faster the cycle.</p>
-      </details>
-      <details class="faq-item">
-        <summary>When will it be my turn?</summary>
-        <p>It depends on the fund and number of participants. Use the calculator and queue above to estimate. It’s not a promise, it’s transparent logic.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Can I stay anonymous or leave anytime?</summary>
-        <p>Yes. You can change or stop contributions anytime. Shared stories appear only with consent. Money already contributed remains to help others — your act of kindness.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How can I help without joining?</summary>
-        <p>Even 1 € helps the queue move faster. You can donate, share this project, or simply tell friends — awareness is also support.</p>
-      </details>
-    </section>
+    <p>Saving for a home alone can take years or may even be impossible. When people unite, small contributions create a real impact. Transparency, simplicity, and consistency make this system work.</p>
+  </div>
+</section>
 
-    <!-- Apply -->
-    <section id="apply" class="section card">
-      <h2>Apply for Help 💌</h2>
-      <p class="section-intro">Describe your goal honestly — it stays between us.</p>
-      <form action="https://formspree.io/f/xvgwyayy" method="POST" class="apply-form">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Contact email" required>
-        <textarea name="story" rows="4" placeholder="Describe your goal and amount…" required></textarea>
-        <input type="number" name="sum" min="10" step="5" placeholder="Desired amount (€)" required>
-        <button type="submit" class="btn primary">Submit 💚</button>
-      </form>
-      <p class="muted small">If the form doesn’t send — write to: <a href="mailto:panina19771977@gmail.com">panina19771977@gmail.com</a></p>
-    </section>
 
-    <!-- Support -->
-    <section id="support" class="section card support-card">
-      <h2>Support the Project 💚</h2>
-      <p>Even €1 makes a difference and moves the queue faster.</p>
-      <div class="support-buttons">
-        <a class="btn gold" href="https://paypal.me/NataliaDomkina" target="_blank" rel="noreferrer">💚 PayPal — @Natalia Domkina</a>
-        <a class="btn green" href="https://revolut.me/n_domkina" target="_blank" rel="noreferrer">💜 Revolut — @n_domkina</a>
-      </div>
-    </section>
+<!-- REAL GOALS -->
+<section id="participants" class="section">
+  <div class="container">
+    <h2>Real Participant Goals</h2>
+    <hr>
 
-    <!-- Share -->
-    <section id="share" class="section card">
-      <h2>Share this Project</h2>
-      <p class="section-intro">The more people join — the faster support reaches everyone.</p>
-      <div class="share-buttons">
-        <a class="share-btn" href="https://t.me/share/url?url=https://nataliahelp-project.netlify.app&text=Join%20Natalia%20Help%20Project%20—%20honest%20mutual%20support" target="_blank">Telegram</a>
-        <a class="share-btn" href="https://wa.me/?text=Natalia%20Help%20Project%20https://nataliahelp-project.netlify.app" target="_blank">WhatsApp</a>
-        <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://nataliahelp-project.netlify.app" target="_blank">Facebook</a>
-        <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://nataliahelp-project.netlify.app&text=Natalia%20Help%20Project%20—%20Together%20We’re%20Stronger" target="_blank">X / Twitter</a>
-        <a class="share-btn" href="mailto:?subject=Natalia%20Help%20Project&body=Check%20out%20this%20project:%20https://nataliahelp-project.netlify.app" target="_blank">Email</a>
-      </div>
-    </section>
-  </main>
+    <p>
+      Anna — saving for an apartment: 10,000 €<br>
+      Sergey — building a house: 20,000 €<br>
+      Irina — dreaming of a cottage: 8,000 €<br>
+      Mikhail — buying land: 12,000 €
+    </p>
 
-  <footer class="footer">
-    <p>✉️ Email: <a href="mailto:panina19771977@gmail.com">panina19771977@gmail.com</a></p>
-    <p>💚 Support: <a href="https://paypal.me/NataliaDomkina" target="_blank">PayPal</a> · <a href="https://revolut.me/n_domkina" target="_blank">Revolut</a></p>
-    <p>© 2025 Natalia Domkina — Natalia Help Project — NHP | Together We’re Stronger 🌿</p>
-  </footer>
+    <div class="actions">
+      <a class="btn-primary" href="queue-en.html">View Queue</a>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+
+<!-- PRINCIPLES -->
+<section id="principles" class="section">
+  <div class="container">
+    <h2>Principles & Transparency</h2>
+    <hr>
+
+    <ul>
+      <li><strong>Housing only:</strong> apartment, house, land, cottage, or other housing-related goals.</li>
+      <li><strong>Voluntary:</strong> no obligations, contributions are small and optional.</li>
+      <li><strong>Transparent:</strong> queue and reports are visible on the website.</li>
+      <li><strong>Responsible:</strong> commission is only for platform improvement.</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section id="faq" class="section">
+  <div class="container">
+    <h2>FAQ</h2>
+    <hr>
+
+    <h3>What contributions can I make?</h3>
+    <p>Voluntary: 10 €, 50 €, or 100 € — you choose.</p>
+
+    <h3>What happens after I receive support?</h3>
+    <p>You remain in the platform and continue helping others.</p>
+
+    <h3>Where does the commission go?</h3>
+    <p>Website operation, security, support, transparency tools.</p>
+
+    <h3>Can I donate without joining the queue?</h3>
+    <p>Yes! Anyone can make a donation and support participants.</p>
+  </div>
+</section>
+
+
+<!-- DONATE -->
+<section id="support" class="section">
+  <div class="container">
+    <h2>Support the Project</h2>
+    <hr>
+
+    <p style="text-align:center;">Even if you are not a participant, your help brings someone closer to their home.</p>
+
+<div class="actions" style="justify-content:center;">
+  <a class="btn-primary"
+     href="https://paypal.me/NataliaDomkina"
+     target="_blank">Donate via PayPal</a>
+
+  <a class="btn-secondary"
+     href="https://revolut.me/n_domkina"
+     target="_blank">Donate via Revolut</a>
+</div>
+
+    <div class="actions" style="justify-content:center;">
+      <button class="btn-secondary" onclick="shareSite()">Share</button>
+      <button class="btn-secondary" onclick="inviteFriend()">Invite a Friend</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA JOIN -->
+<section id="cta-apply" class="section">
+  <div class="container" style="text-align:center;">
+    <h2>Ready to Join?</h2>
+    <p>Take a moment to learn about the platform and submit a short voluntary application.</p>
+    <a class="btn-primary" href="apply-en.html">Join Now</a>
+  </div>
+</section>
+
+
+<!-- RULES -->
+<section id="rules" class="section">
+  <div class="container">
+    <h2>Participation Rules</h2>
+    <hr>
+
+    <ul>
+      <li>All contributions are voluntary.</li>
+      <li>Support is distributed by transparent queue.</li>
+      <li>Commission is only for platform development.</li>
+      <li>The platform is not a bank or credit institution.</li>
+      <li>Participants and fund movement are visible online.</li>
+    </ul>
+  </div>
+</section>
+<section id="telegram" class="section">
+  <div class="container">
+    <div class="card" style="text-align:center;">
+
+      <h2>Our Telegram</h2>
+      <hr class="gold-line">
+
+      <p class="intro">
+        Join the Mutual Support Platform community — news, updates, queue movement and real stories
+        of participants in one place.
+      </p>
+
+      <a class="btn-primary" href="https://t.me/NHP_Natalia" target="_blank" 
+         style="font-size:17px; padding:12px 26px;">
+        Open Telegram
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>© Mutual Support Platform — voluntary community support</p>
+    <p>Contacts: <a href="mailto:info@nataliahelp.netlify.app">info@nataliahelp.netlify.app</a></p>
+    <p>Telegram: <a href="#">channel</a></p>
+    <p>Google Analytics ID: G-S002SKDYR4</p>
+  </div>
+</footer>
+
+
+<!-- SHARE SCRIPTS -->
+<script>
+function shareSite() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Mutual Support Platform',
+      text: 'Join the Mutual Support Platform — Together to Your Home.',
+      url: 'https://nataliahelp.netlify.app'
+    });
+  } else {
+    navigator.clipboard.writeText('https://nataliahelp.netlify.app');
+    alert('Link copied!');
+  }
+}
+
+function inviteFriend() {
+  navigator.clipboard.writeText('https://nataliahelp.netlify.app');
+  alert('Copy the link and send it to your friend!');
+}
+</script>
+
 </body>
 </html>
