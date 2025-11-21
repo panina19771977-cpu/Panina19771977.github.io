@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Главная -->
+  <url>
+    <loc>https://nataliahelp.netlify.app/</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Основные страницы RU -->
+  <url>
+    <loc>https://nataliahelp.netlify.app/index.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/about.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/apply.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/faq.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/community.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/queue.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/participants.html</loc>
+  </url>
+
+  <!-- Английская версия -->
+  <url>
+    <loc>https://nataliahelp.netlify.app/about-en.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/apply-en.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/faq-en.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/community-en.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/queue-en.html</loc>
+  </url>
+
+  <!-- Блог -->
+  <url>
+    <loc>https://nataliahelp.netlify.app/blog.html</loc>
+  </url>
+
+  <!-- Статьи -->
+  <url>
+    <loc>https://nataliahelp.netlify.app/article1.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/article2.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/article3.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/article4.html</loc>
+  </url>
+  <url>
+    <loc>https://nataliahelp.netlify.app/article5.html</loc>
+  </url>
+
+</urlset>
