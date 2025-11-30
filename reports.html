@@ -1,98 +1,106 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Отчётность — Natalia Help Project</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Отчётность — Natalia Help Project</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="dark-theme">
 
-<header style="text-align:center; padding:20px;">
-    <h1>Natalia Help Project</h1>
-    <nav style="margin-top:10px;">
-        <a href="index.html">Главная</a> |
-        <a href="queue.html">Очередь</a> |
-        <a href="apply.html">Подать заявку</a> |
-        <a href="reports.html" style="font-weight:bold;">Отчётность</a>
-    </nav>
+<header>
+  <h1>Natalia Help Project — Отчётность</h1>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="participants.html">Участники</a>
+    <a href="apply.html">Подать заявку</a>
+    <a href="reports-en.html">EN</a>
+  </nav>
 </header>
 
-<main style="max-width:900px; margin:0 auto; padding:20px;">
+<main class="container">
 
-    <h2>Прозрачная отчётность</h2>
-    <hr>
+  <h2>Прозрачная отчётность</h2>
+  <p>Вся финансовая статистика доступна для просмотра. Раздел автоматически расширяется с ростом участников.</p>
 
-    <p>
-        Здесь представлены реальные движения средств: поступления, выдачи помощи и затраты на обслуживание проекта.
-        Раздел обновляется вручную по мере поступления новых данных.
-    </p>
+  <hr style="border:0;border-bottom:1px solid var(--gold);margin:40px auto;width:60%">
 
-    <!-- Поступления -->
-    <h3 style="margin-top:40px;">Поступления</h3>
+  <!-- Поступления -->
+  <h3>Поступления</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Дата</th>
+        <th>Источник</th>
+        <th>Сумма (€)</th>
+        <th>Комментарий</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>29.11.2025</td>
+        <td>Revolut</td>
+        <td>13</td>
+        <td>Взнос участника</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Дата</th>
-                <th>Источник</th>
-                <th>Сумма (€)</th>
-                <th>Комментарий</th>
-            </tr>
-        </thead>
-        <tbody>
+  <!-- Выданная помощь -->
+  <h3 style="margin-top:40px;">Выданная помощь</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Дата</th>
+        <th>Участник</th>
+        <th>Цель</th>
+        <th>Сумма (€)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
 
-            <!-- Реальный участник -->
-            <tr>
-                <td>29.11.2025</td>
-                <td>Revolut</td>
-                <td>13</td>
-                <td>Взнос участника Евгений</td>
-            </tr>
+  <!-- Комиссия -->
+  <h3 style="margin-top:40px;">Комиссионные расходы</h3>
+  <p>Комиссия удерживается только на обслуживание платформы:</p>
 
-        </tbody>
-    </table>
+  <ul>
+    <li>хостинг и домен;</li>
+    <li>техническая поддержка;</li>
+    <li>поддержка сайта;</li>
+    <li>защита данных;</li>
+    <li>будущая автоматизация;</li>
+  </ul>
 
-    <!-- Выданная помощь -->
-    <h3 style="margin-top:40px;">Выданная помощь</h3>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Дата</th>
-                <th>Участник</th>
-                <th>Цель</th>
-                <th>Сумма (€)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Комиссии -->
-    <h3 style="margin-top:40px;">Комиссионные расходы</h3>
-
-    <p>Комиссия удерживается только на поддержку работы платформы:</p>
-
-    <ul>
-        <li>техническая поддержка;</li>
-        <li>развитие функционала;</li>
-        <li>мониторинг стабильности;</li>
-        <li>обслуживание сайта;</li>
-        <li>будущие автоматизации.</li>
-    </ul>
+  <table class="table" style="margin-top:20px;">
+    <thead>
+      <tr>
+        <th>Дата</th>
+        <th>Статья расхода</th>
+        <th>Сумма (€)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
 
 </main>
 
 <footer style="text-align:center; margin-top:40px; padding:20px;">
-    <p>© 2025 Natalia Help Project</p>
+  <p>© 2025 Natalia Help Project</p>
 </footer>
 
 </body>
