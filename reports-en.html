@@ -1,127 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reports – Mutual Support Platform</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports — Natalia Help Project</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="dark-theme">
 
 <header>
-  <h1>Mutual Support Platform</h1>
+  <h1>Natalia Help Project — Reports</h1>
   <nav>
     <a href="nataliahelp-en.html">Home</a>
-    <a href="queue-en.html">Queue</a>
+    <a href="participants-en.html">Participants</a>
     <a href="apply-en.html">Join</a>
-    <a href="reports-en.html" style="font-weight:bold;">Reports</a>
-    <div class="lang-switch">
-      <button onclick="window.location='reports.html'">RU</button>
-      <button>EN</button>
-    </div>
+    <a href="reports.html">RU</a>
   </nav>
 </header>
 
-<section>
-  <div class="container">
+<main class="container">
 
-    <h3>Transparency & Reports</h3>
+  <h2>Transparency & Reports</h2>
+  <p>All financial activity is publicly available. The section expands automatically as the community grows.</p>
 
-    <p>The Mutual Support Platform operates openly and honestly.
-       All movement of funds, issued support and the use of commission
-       are publicly displayed here.</p>
+  <hr style="border:0;border-bottom:1px solid var(--gold);margin:40px auto;width:60%">
 
-    <p>This section shows the current platform reports.
-       As the community grows, this page will expand automatically.</p>
+  <!-- Incoming -->
+  <h3>Incoming Contributions</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Source</th>
+        <th>Amount (€)</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>29.11.2025</td>
+        <td>Revolut</td>
+        <td>13</td>
+        <td>Participant contribution</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <hr style="border:0;border-bottom:1px solid var(--gold);margin:40px auto;width:60%">
+  <!-- Issued Support -->
+  <h3 style="margin-top:40px;">Issued Support</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Participant</th>
+        <th>Goal</th>
+        <th>Amount (€)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <!-- Incoming contributions -->
-    <h3>Incoming Contributions</h3>
+  <!-- Commission -->
+  <h3 style="margin-top:40px;">Commission Usage</h3>
+  <p>The commission is used only for platform operation and development:</p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Source</th>
-          <th>Amount (€)</th>
-          <th>Note</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>29.11.2025</td>
-          <td>Revolut</td>
-          <td>13</td>
-          <td>Participant contribution</td>
-        </tr>
-      </tbody>
-    </table>
+  <ul>
+    <li>hosting and domain;</li>
+    <li>technical support;</li>
+    <li>site maintenance;</li>
+    <li>data protection and security;</li>
+    <li>future automation;</li>
+  </ul>
 
-    <!-- Issued support -->
-    <h3 style="margin-top:50px;">Issued Support</h3>
+  <table class="table" style="margin-top:20px;">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Expense Type</th>
+        <th>Amount (€)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Participant</th>
-          <th>Goal</th>
-          <th>Amount (€)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- currently empty -->
-        <tr>
-          <td colspan="4" style="text-align:center;">No issued support yet</td>
-        </tr>
-      </tbody>
-    </table>
+</main>
 
-    <!-- Commission usage -->
-    <h3 style="margin-top:50px;">Platform Commission Usage</h3>
-
-    <p>The commission is used only for technical and service-related needs:</p>
-
-    <ul>
-      <li>hosting and domain;</li>
-      <li>technical support;</li>
-      <li>site maintenance;</li>
-      <li>data protection and security;</li>
-      <li>feature upgrades;</li>
-      <li>system stability monitoring.</li>
-    </ul>
-
-    <!-- Commission table -->
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Expense Type</th>
-          <th>Amount (€)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>05.02.2025</td>
-          <td>Hosting & maintenance</td>
-          <td>6</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div style="text-align:center; margin-top:40px;">
-      <button class="button" onclick="window.location='nataliahelp-en.html'">Back to Home</button>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>Mutual Support Platform — voluntary support for people</p>
-  </div>
+<footer style="text-align:center; margin-top:40px; padding:20px;">
+  <p>© 2025 Natalia Help Project</p>
 </footer>
 
 </body>
