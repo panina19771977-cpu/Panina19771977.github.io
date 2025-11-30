@@ -1,130 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Отчётность — Платформа Взаимопомощи</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Отчётность — Natalia Help Project</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header>
-  <h1>Платформа&nbsp;Взаимопомощи</h1>
-  <nav>
-    <a href="index.html">Главная</a>
-    <a href="queue.html">Участники</a>
-    <a href="apply.html">Добавить&nbsp;себя</a>
-    <a href="reports.html">Отчётность</a>
-    <div class="lang-switch">
-      <button>RU</button>
-      <button onclick="window.location='reports-en.html'">EN</button>
-    </div>
-  </nav>
+<header style="text-align:center; padding:20px;">
+    <h1>Natalia Help Project</h1>
+    <nav style="margin-top:10px;">
+        <a href="index.html">Главная</a> |
+        <a href="queue.html">Очередь</a> |
+        <a href="apply.html">Подать заявку</a> |
+        <a href="reports.html" style="font-weight:bold;">Отчётность</a>
+    </nav>
 </header>
 
-<section>
-  <div class="container">
-    <h3>Прозрачная отчётность</h3>
+<main style="max-width:900px; margin:0 auto; padding:20px;">
 
-    <p>Платформа Взаимопомощи работает честно и открыто.  
-       Все движения средств, комиссионные расходы и распределение помощи доступны для просмотра.</p>
+    <h2>Прозрачная отчётность</h2>
+    <hr>
 
-    <p>Здесь представлена текущая отчётность.  
-       По мере роста платформы раздел будет расширяться.</p>
+    <p>
+        Здесь представлены реальные движения средств: поступления, выдачи помощи и затраты на обслуживание проекта.
+        Раздел обновляется вручную по мере поступления новых данных.
+    </p>
 
-    <hr style="border:0;border-bottom:1px solid var(--gold);margin:40px auto;width:60%">
+    <!-- Поступления -->
+    <h3 style="margin-top:40px;">Поступления</h3>
 
-    <h3>Поступления</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Источник</th>
+                <th>Сумма (€)</th>
+                <th>Комментарий</th>
+            </tr>
+        </thead>
+        <tbody>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Дата</th>
-          <th>Источник</th>
-          <th>Сумма (€)</th>
-          <th>Комментарий</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>01.02.2025</td>
-          <td>PayPal</td>
-          <td>50</td>
-          <td>Пожертвование</td>
-        </tr>
-        <tr>
-          <td>03.02.2025</td>
-          <td>Revolut</td>
-          <td>10</td>
-          <td>Взнос участника</td>
-        </tr>
-      </tbody>
+            <!-- Реальный участник -->
+            <tr>
+                <td>29.11.2025</td>
+                <td>Revolut</td>
+                <td>13</td>
+                <td>Взнос участника Евгений</td>
+            </tr>
+
+        </tbody>
     </table>
 
-    <h3 style="margin-top:50px;">Выданная помощь</h3>
+    <!-- Выданная помощь -->
+    <h3 style="margin-top:40px;">Выданная помощь</h3>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Дата</th>
-          <th>Участник</th>
-          <th>Цель</th>
-          <th>Сумма (€)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>10.02.2025</td>
-          <td>Анна</td>
-          <td>Квартира</td>
-          <td>10 000</td>
-        </tr>
-      </tbody>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Участник</th>
+                <th>Цель</th>
+                <th>Сумма (€)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+        </tbody>
     </table>
 
-    <h3 style="margin-top:50px;">Комиссионные расходы</h3>
+    <!-- Комиссии -->
+    <h3 style="margin-top:40px;">Комиссионные расходы</h3>
 
-    <p>Комиссия удерживается только на обслуживание и развитие платформы:</p>
+    <p>Комиссия удерживается только на поддержку работы платформы:</p>
 
     <ul>
-      <li>оплата сервера и домена;</li>
-      <li>поддержка сайта;</li>
-      <li>защита и шифрование данных;</li>
-      <li>модернизация функционала;</li>
-      <li>техническая поддержка;</li>
-      <li>мониторинг стабильности.</li>
+        <li>техническая поддержка;</li>
+        <li>развитие функционала;</li>
+        <li>мониторинг стабильности;</li>
+        <li>обслуживание сайта;</li>
+        <li>будущие автоматизации.</li>
     </ul>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Дата</th>
-          <th>Статья расхода</th>
-          <th>Сумма (€)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>05.02.2025</td>
-          <td>Хостинг и обслуживание</td>
-          <td>6</td>
-        </tr>
-      </tbody>
-    </table>
+</main>
 
-    <div style="text-align:center; margin-top:40px;">
-      <button class="button" onclick="window.location='index.html'">Вернуться на главную</button>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>© Платформа Взаимопомощи — добровольная поддержка людей</p>
-    <p><a href="index.html">Главная</a> | <a href="queue.html">Участники</a> | <a href="apply.html">Добавить себя</a></p>
-  </div>
+<footer style="text-align:center; margin-top:40px; padding:20px;">
+    <p>© 2025 Natalia Help Project</p>
 </footer>
 
 </body>
